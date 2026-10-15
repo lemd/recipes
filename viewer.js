@@ -1,8 +1,10 @@
-import { formatMinutes, ingredientLines, methodLabel, scaleIngredient, tidyStepText } from "./lib/format.js";
+import { formatMinutes, ingredientLines, scaleIngredient, tidyStepText } from "./lib/format.js";
+import { visibleTags } from "./lib/tags.js";
 
 const list = document.querySelector("#list");
 const article = document.querySelector("#recipe");
 const systemSelect = document.querySelector("#system");
+const filters = document.querySelector("#filters");
 
 const TIMER_KEY = "recipe-step-timer";
 
@@ -12,6 +14,7 @@ let currentFile = "";
 let servingCount = null;
 let timer = loadTimer();
 let tickId = null;
+const selectedTags = new Set();
 const cache = new Map();
 
 const timerBar = document.createElement("div");
@@ -72,6 +75,7 @@ async function load() {
   if (!response.ok) throw new Error("Couldn't read recipes/index.json.");
   const body = await response.json();
   catalog = Array.isArray(body.recipes) ? body.recipes : [];
+  await Promise.all(catalog.map((entry) => loadDoc(entry).catch(() => null)));
   renderList();
   if (!catalog.length) {
     article.textContent = "No recipes saved yet.";
@@ -83,12 +87,21 @@ async function load() {
 }
 
 function renderList() {
+  renderFilters();
   list.replaceChildren();
+  const shown = catalog.filter((entry) => matchesTags(entry));
   if (!catalog.length) {
     list.textContent = "None yet.";
     return;
   }
-  for (const entry of catalog) {
+  if (!shown.length) {
+    const empty = document.createElement("p");
+    empty.className = "muted";
+    empty.textContent = "Nothing with those tags.";
+    list.append(empty);
+    return;
+  }
+  for (const entry of shown) {
     const button = document.createElement("button");
     button.type = "button";
     button.className = "recipe-link";
@@ -99,13 +112,50 @@ function renderList() {
   }
 }
 
-async function openRecipe(entry) {
+function renderFilters() {
+  filters.replaceChildren();
+  const available = new Map();
+  for (const entry of catalog) {
+    for (const tag of entryTags(entry)) available.set(tag.value, tag.label);
+  }
+  for (const [value, label] of available) {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "chip";
+    button.textContent = label;
+    button.setAttribute("aria-pressed", selectedTags.has(value) ? "true" : "false");
+    button.addEventListener("click", () => {
+      if (selectedTags.has(value)) selectedTags.delete(value);
+      else selectedTags.add(value);
+      renderList();
+      if (current) renderRecipe(current);
+    });
+    filters.append(button);
+  }
+}
+
+function entryTags(entry) {
+  const doc = cache.get(entry.file);
+  return doc ? visibleTags(doc.recipe) : [];
+}
+
+function matchesTags(entry) {
+  if (!selectedTags.size) return true;
+  const values = new Set(entryTags(entry).map((tag) => tag.value));
+  return [...selectedTags].every((value) => values.has(value));
+}
+
+async function loadDoc(entry) {
   if (!cache.has(entry.file)) {
     const response = await fetch(`recipes/${encodeURIComponent(entry.file)}`);
     if (!response.ok) throw new Error(`Couldn't read ${entry.file}.`);
     cache.set(entry.file, await response.json());
   }
-  current = cache.get(entry.file);
+  return cache.get(entry.file);
+}
+
+async function openRecipe(entry) {
+  current = await loadDoc(entry);
   currentFile = entry.file;
   servingCount = baseServings(current);
   const url = new URL(location.href);
@@ -130,22 +180,35 @@ function renderRecipe(doc) {
   const facts = document.createElement("div");
   facts.className = "facts";
   if (base) facts.append(servingsControl(servingCount));
-  else if (doc.recipe.yield?.text) {
-    const chip = document.createElement("span");
-    chip.textContent = doc.recipe.yield.text;
-    facts.append(chip);
-  }
+  else if (doc.recipe.yield?.text) facts.append(chip(doc.recipe.yield.text));
   const bits = [];
   for (const [key, label] of [["prep", "prep"], ["cook", "cook"], ["total", "total"]]) {
     const formatted = formatMinutes(doc.recipe.timesMinutes?.[key]);
     if (formatted) bits.push(`${label} ${formatted}`);
   }
-  for (const bit of bits) {
-    const chip = document.createElement("span");
-    chip.textContent = bit;
-    facts.append(chip);
-  }
+  for (const bit of bits) facts.append(chip(bit));
   if (facts.childNodes.length) article.append(facts);
+
+  const tags = visibleTags(doc.recipe);
+  if (tags.length) {
+    const row = document.createElement("div");
+    row.className = "tags";
+    for (const tag of tags) {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "chip";
+      button.textContent = tag.label;
+      button.setAttribute("aria-pressed", selectedTags.has(tag.value) ? "true" : "false");
+      button.addEventListener("click", () => {
+        if (selectedTags.has(tag.value)) selectedTags.delete(tag.value);
+        else selectedTags.add(tag.value);
+        renderList();
+        renderRecipe(doc);
+      });
+      row.append(button);
+    }
+    article.append(row);
+  }
 
   const system = systemSelect.value;
   const ingredients = document.createElement("section");
@@ -214,11 +277,6 @@ function renderRecipe(doc) {
     steps.append(items);
   }
   article.append(steps);
-
-  const meta = document.createElement("p");
-  meta.className = "muted";
-  meta.textContent = methodLabel(doc);
-  article.append(meta);
   renderTimer();
   if (doc.recipe.sourceUrl) {
     const link = document.createElement("a");
@@ -226,6 +284,13 @@ function renderRecipe(doc) {
     link.textContent = doc.recipe.sourceUrl;
     article.append(link);
   }
+}
+
+function chip(text) {
+  const el = document.createElement("span");
+  el.className = "chip";
+  el.textContent = text;
+  return el;
 }
 
 function baseServings(doc) {

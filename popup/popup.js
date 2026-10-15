@@ -4,6 +4,7 @@ import { findSavedRecipe, runtimeSettings } from "../lib/folder.js";
 import { publishRecipe, saveStatus } from "../lib/publish.js";
 import { SCHEMA_VERSION } from "../lib/schema.js";
 import { withDefaults } from "../lib/settings.js";
+import { visibleTags } from "../lib/tags.js";
 
 const pageTitle = document.querySelector("#page-title");
 const extractButton = document.querySelector("#extract");
@@ -135,11 +136,24 @@ function render(doc) {
     if (formatted) factText.push(`${label} ${formatted}`);
   }
   for (const text of factText) {
-    const chip = document.createElement("span");
-    chip.textContent = text;
-    facts.append(chip);
+    const item = document.createElement("span");
+    item.className = "chip";
+    item.textContent = text;
+    facts.append(item);
   }
   if (factText.length) result.append(facts);
+  const tags = visibleTags(recipe);
+  if (tags.length) {
+    const row = document.createElement("div");
+    row.className = "tags";
+    for (const tag of tags) {
+      const item = document.createElement("span");
+      item.className = "chip";
+      item.textContent = tag.label;
+      row.append(item);
+    }
+    result.append(row);
+  }
 
   const system = systemSelect.value;
   const ingredientCount = recipe.ingredientGroups.reduce((sum, group) => sum + group.ingredients.length, 0);

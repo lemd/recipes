@@ -3,6 +3,7 @@ import test from "node:test";
 import { findCatalogEntry, mergeCatalogs, recipeUrlKey, upsertCatalog } from "../lib/catalog.js";
 import { parseEnv, resolveSettings, settingsFromEnv } from "../lib/env.js";
 import { pageFromHtml } from "../lib/fetch-html.js";
+import { assignTags, normalizeTags } from "../lib/tags.js";
 import { decodeBase64Utf8, parseGithubRepo, pushRecipe, utf8Base64 } from "../lib/github.js";
 import { publishRecipe, saveStatus } from "../lib/publish.js";
 import { extractPage } from "../lib/extract-page.js";
@@ -210,6 +211,9 @@ test("normalizes embedded recipe data into the standard file", () => {
   assert.equal(doc.recipe.stepGroups[0].steps[1].temperature.celsius.value, 180);
   assert.equal(doc.recipe.stepGroups[0].steps[1].temperature.fahrenheit.value, 356);
   assert.deepEqual(doc.recipe.diets, ["vegan"]);
+  assert.deepEqual(doc.recipe.tags.seasons, ["winter"]);
+  assert.deepEqual(doc.recipe.tags.courses, ["soup"]);
+  assert.deepEqual(doc.recipe.tags.meals, ["dinner"]);
   assert.equal(doc.recipe.nutrition.nutrients[0].amount, 120);
   assert.equal(parseIsoDuration("PT1H30M"), 90);
 });
@@ -320,6 +324,7 @@ test("asks the model for the original units and sends article text", () => {
   assert.match(built.messages[0].content, /Do not convert/);
   assert.match(built.messages[0].content, /Grandma's/);
   assert.match(built.messages[0].content, /clove/);
+  assert.match(built.messages[0].content, /winter/);
   assert.match(built.messages[0].content, /own line/);
   assert.match(built.messages[1].content, /https:\/\/example.com\/soup/);
   assert.match(built.messages[1].content, /Boil 1 cup of water/);
@@ -509,6 +514,39 @@ test("reads a recipe from page HTML", () => {
   assert.equal(page.structured.length, 1);
   assert.equal(page.structured[0].name, "Soup");
   assert.match(page.text, /Boil the water/);
+});
+
+test("tags seasons, meals, courses, and methods from the dish", () => {
+  const soup = assignTags({ name: "Tomato soup", category: "Soup" });
+  assert.deepEqual(soup.seasons, ["winter"]);
+  assert.deepEqual(soup.courses, ["soup"]);
+  assert.deepEqual(soup.meals, ["dinner"]);
+
+  const salad = assignTags({ name: "Tomato salad" });
+  assert.deepEqual(salad.seasons, ["summer"]);
+  assert.deepEqual(salad.courses, ["salad"]);
+  assert.ok(salad.meals.includes("lunch"));
+
+  const bbq = assignTags({ name: "BBQ chicken", category: "Main course" });
+  assert.deepEqual(bbq.seasons, ["summer"]);
+  assert.deepEqual(bbq.courses, ["main"]);
+  assert.deepEqual(bbq.methods, ["grill"]);
+
+  const cold = assignTags({ name: "Gazpacho", category: "Soup" });
+  assert.deepEqual(cold.seasons, ["summer"]);
+
+  const side = assignTags({
+    name: "Potatoes au gratin",
+    category: "Side Dish",
+    stepGroups: [{ steps: [{ text: "Bake until golden." }] }],
+  });
+  assert.deepEqual(side.courses, ["side"]);
+  assert.deepEqual(side.seasons, ["winter"]);
+  assert.ok(side.methods.includes("bake"));
+
+  const tagged = normalizeTags({ tags: { meals: ["brunch", "holiday"], seasons: ["spring"] } }, { name: "Eggs" });
+  assert.deepEqual(tagged.meals, ["brunch", "breakfast"]);
+  assert.deepEqual(tagged.seasons, ["spring"]);
 });
 
 test("scales ingredient amounts with the serving count", () => {

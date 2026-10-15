@@ -65,6 +65,54 @@ header p, .muted { color: var(--muted); }
 
 #add-status { grid-column: 1 / -1; min-height: 1.2em; }
 
+#filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 8px 20px 0;
+}
+
+#filters:empty { display: none; }
+
+.facts, .tags {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.facts { margin: 14px 0 8px; }
+
+.tags { margin: 0 0 18px; }
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  height: 32px;
+  padding: 0 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--bg);
+  color: var(--ink);
+  font-size: 13px;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+button.chip {
+  font: inherit;
+  cursor: pointer;
+  background: transparent;
+}
+
+button.chip[aria-pressed="true"] {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: #fff;
+}
+
 label { display: flex; flex-direction: column; gap: 6px; font-size: 13px; color: var(--muted); }
 
 select {
@@ -111,15 +159,6 @@ article { padding: 20px; }
 
 article h2 { font-size: 28px; letter-spacing: -0.03em; margin-bottom: 8px; }
 
-.facts { display: flex; flex-wrap: wrap; gap: 6px; margin: 12px 0 18px; }
-
-.facts span {
-  background: var(--bg);
-  border-radius: 999px;
-  padding: 3px 8px;
-  font-size: 13px;
-}
-
 h3 {
   font-size: 12px;
   letter-spacing: 0.04em;
@@ -136,10 +175,11 @@ li { margin: 0 0 10px; line-height: 1.4; }
   display: inline-flex;
   align-items: center;
   gap: 8px;
+  height: 32px;
   background: var(--card);
   border: 1px solid var(--line);
   border-radius: 999px;
-  padding: 2px 8px 2px 2px;
+  padding: 0 10px 0 2px;
 }
 
 .servings button, .step-timer, #timer button {
@@ -148,8 +188,8 @@ li { margin: 0 0 10px; line-height: 1.4; }
 }
 
 .servings button {
-  width: 32px;
-  height: 32px;
+  width: 28px;
+  height: 28px;
   border: 0;
   border-radius: 999px;
   background: var(--bg);

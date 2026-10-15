@@ -128,18 +128,27 @@ select {
   margin-bottom: 4px;
 }
 
-.facts {
+.facts, .tags {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: 6px;
   margin: 8px 0 12px;
 }
 
-.facts span {
-  background: var(--bg);
+.tags { margin-top: 0; }
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  height: 28px;
+  padding: 0 10px;
+  border: 1px solid var(--line);
   border-radius: 999px;
-  padding: 3px 8px;
+  background: var(--bg);
   font-size: 12px;
+  line-height: 1;
+  white-space: nowrap;
 }
 
 .group-name, .steps h3, .ingredients h3 {
