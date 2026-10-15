@@ -1,0 +1,126 @@
+:root {
+  color-scheme: light;
+  --bg: #f4efe8;
+  --ink: #1d1712;
+  --muted: #6f6258;
+  --line: #e3d6c8;
+  --card: #fffdfb;
+  --accent: #c4552a;
+  --accent-ink: #fff8f4;
+  --ok: #2f6b4f;
+  font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+}
+
+main {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 32px 20px 48px;
+}
+
+header {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+header img { border-radius: 8px; margin-top: 2px; }
+
+h1 { margin: 0 0 6px; font-size: 28px; letter-spacing: -0.03em; }
+
+header p, .help, #status { color: var(--muted); line-height: 1.45; }
+
+header p { margin: 0; }
+
+form {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 8px 18px 18px;
+}
+
+fieldset {
+  border: 0;
+  padding: 14px 0;
+  margin: 0;
+  border-bottom: 1px solid var(--line);
+}
+
+legend {
+  font-weight: 650;
+  padding: 0;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 12px;
+  font-size: 14px;
+}
+
+label.choice {
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+input[type="text"], input[type="password"], input[type="url"], input:not([type]) {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 8px 10px;
+  font: inherit;
+  color: inherit;
+  background: #fff;
+}
+
+.help { margin: 10px 0 0; font-size: 13px; }
+
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.92em;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+button {
+  font: inherit;
+  border: 0;
+  border-radius: 8px;
+  padding: 8px 14px;
+  background: var(--accent);
+  color: var(--accent-ink);
+  cursor: pointer;
+}
+
+button.ghost {
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--line);
+}
+
+fieldset > button.ghost {
+  margin-top: 12px;
+}
+
+button:focus-visible, input:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+#status { min-height: 20px; margin: 12px 0 0; }
+#status.ok { color: var(--ok); }
+#status.error { color: var(--accent); }

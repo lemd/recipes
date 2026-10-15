@@ -1,0 +1,174 @@
+:root {
+  color-scheme: light;
+  --bg: #f4efe8;
+  --ink: #1d1712;
+  --muted: #6f6258;
+  --line: #e3d6c8;
+  --card: #fffdfb;
+  --accent: #c4552a;
+  font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: end;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 28px 20px 12px;
+}
+
+h1, h2, p { margin: 0; }
+
+h1 { font-size: 32px; letter-spacing: -0.03em; }
+
+header p, .muted { color: var(--muted); }
+
+label { display: flex; flex-direction: column; gap: 6px; font-size: 13px; color: var(--muted); }
+
+select {
+  font: inherit;
+  color: var(--ink);
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 6px 8px;
+}
+
+#layout {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 20px;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 12px 20px 48px;
+}
+
+nav, article {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 12px;
+}
+
+button.recipe-link {
+  display: block;
+  width: 100%;
+  text-align: left;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button.recipe-link[aria-current="true"] { background: var(--bg); }
+
+article { padding: 20px; }
+
+article h2 { font-size: 28px; letter-spacing: -0.03em; margin-bottom: 8px; }
+
+.facts { display: flex; flex-wrap: wrap; gap: 6px; margin: 12px 0 18px; }
+
+.facts span {
+  background: var(--bg);
+  border-radius: 999px;
+  padding: 3px 8px;
+  font-size: 13px;
+}
+
+h3 {
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 18px 0 8px;
+}
+
+ol { margin: 0; padding-left: 20px; }
+
+li { margin: 0 0 10px; line-height: 1.4; }
+
+.servings {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 2px 8px 2px 2px;
+}
+
+.servings button, .step-timer, #timer button {
+  font: inherit;
+  cursor: pointer;
+}
+
+.servings button {
+  width: 32px;
+  height: 32px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--bg);
+}
+
+.servings button:disabled { opacity: 0.4; cursor: default; }
+
+.step-text { white-space: pre-line; }
+
+.step-timer {
+  display: inline-block;
+  margin-top: 6px;
+  border: 1px solid var(--line);
+  background: var(--bg);
+  border-radius: 999px;
+  padding: 6px 12px;
+}
+
+#timer {
+  position: fixed;
+  left: 12px;
+  right: 12px;
+  bottom: 12px;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  max-width: 640px;
+  margin: 0 auto;
+  background: var(--ink);
+  color: #fff;
+  border-radius: 14px;
+  padding: 12px 14px;
+}
+
+#timer button {
+  border: 0;
+  background: transparent;
+  color: inherit;
+}
+
+body.timing { padding-bottom: 76px; }
+
+.group { margin-top: 8px; font-size: 13px; color: var(--muted); }
+
+.secondary { color: var(--muted); font-size: 13px; }
+
+a { color: var(--accent); }
+
+@media (max-width: 720px) {
+  #layout { grid-template-columns: 1fr; }
+  header { align-items: start; flex-direction: column; }
+}

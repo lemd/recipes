@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "recipe",
+  "version": "1.0.0",
+  "description": "Save a recipe page into the local repo as one standard JSON file.",
+  "minimum_chrome_version": "120",
+  "action": {
+    "default_title": "recipe",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "side_panel": {
+    "default_path": "popup/popup.html"
+  },
+  "options_page": "options/options.html",
+  "background": {
+    "service_worker": "scripts/service-worker.js",
+    "type": "module"
+  },
+  "permissions": ["activeTab", "scripting", "storage", "contextMenus", "sidePanel"],
+  "host_permissions": [
+    "http://*/*",
+    "https://*/*"
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "recipes": [
+    {
+      "file": "chicken-chow-mein-style-noodles-with-stir-fried-veggies-and-peanuts.json",
+      "name": "Chicken Chow Mein-Style Noodles with Stir-Fried Veggies and Peanuts",
+      "sourceUrl": "https://www.hellofresh.ca/recipes/chicken-chow-mein-style-noodles-65a642780db02dbb4e07d400",
+      "extractedAt": "2026-10-09T22:56:53.314Z"
+    },
+    {
+      "file": "creamy-au-gratin-potatoes.json",
+      "name": "Creamy au Gratin Potatoes",
+      "sourceUrl": "https://www.allrecipes.com/recipe/15925/creamy-au-gratin-potatoes/",
+      "extractedAt": "2026-10-15T21:10:15.118Z"
+    },
+    {
+      "file": "creamy-potatoes-au-gratin.json",
+      "name": "Creamy Potatoes Au Gratin",
+      "sourceUrl": "https://www.aheadofthyme.com/creamy-potatoes-au-gratin/",
+      "extractedAt": "2026-10-15T21:09:21.330Z"
+    },
+    {
+      "file": "moo-shu-pork-tacos-with-stir-fried-veggies-and-sriracha-mayo.json",
+      "name": "Moo Shu Pork Tacos with Stir-Fried Veggies and Sriracha Mayo",
+      "sourceUrl": "https://www.hellofresh.ca/recipes/moo-shu-pork-tacos-59cc1c07a2882a27512f7302",
+      "extractedAt": "2026-10-09T22:56:29.132Z"
+    },
+    {
+      "file": "perfect-au-gratin-potatoes.json",
+      "name": "PERFECT Au Gratin Potatoes",
+      "sourceUrl": "https://www.daringgourmet.com/perfectly-creamy-au-gratin-potatoes/",
+      "extractedAt": "2026-10-15T21:08:44.299Z"
+    }
+  ]
+}

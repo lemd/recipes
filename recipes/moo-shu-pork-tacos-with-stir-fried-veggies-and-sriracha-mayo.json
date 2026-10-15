@@ -1,0 +1,568 @@
+{
+  "schemaVersion": "1.0.0",
+  "recipe": {
+    "name": "Moo Shu Pork Tacos with Stir-Fried Veggies and Sriracha Mayo",
+    "description": "The original moo shu hails from northern China, where pork and veggies are typically served inside flat wheat pancakes. It seemed only natural for us to taco-ify the recipe, using warm flour tortillas to swaddle the savoury stir-fry. The sriracha mayo, however, is a border-hopping, decidedly non-traditional addition that delivers an addictive combo of spicy and creamy.",
+    "author": "HelloFresh",
+    "sourceUrl": "https://www.hellofresh.ca/recipes/moo-shu-pork-tacos-59cc1c07a2882a27512f7302",
+    "language": "en-CA",
+    "imageUrls": [
+      "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/moo-shu-pork-tacos-d01f632b.jpg"
+    ],
+    "yield": {
+      "servings": 2,
+      "text": null
+    },
+    "timesMinutes": {
+      "prep": null,
+      "cook": null,
+      "total": 30,
+      "rest": null
+    },
+    "cuisine": "Fusion",
+    "category": "main course",
+    "keywords": [],
+    "diets": [],
+    "equipment": [
+      "Paper Towel"
+    ],
+    "ingredientGroups": [
+      {
+        "id": "group-1",
+        "name": null,
+        "ingredients": [
+          {
+            "id": "ingredient-1",
+            "text": "250 g Ground Pork",
+            "name": "Ground Pork",
+            "quantity": 250,
+            "quantityMax": null,
+            "unit": "g",
+            "unitDimension": "mass",
+            "preparation": null,
+            "optional": false,
+            "comment": null,
+            "measures": {
+              "asWritten": {
+                "quantity": 250,
+                "quantityMax": null,
+                "unit": "g"
+              },
+              "metric": {
+                "mass": {
+                  "quantity": 250,
+                  "quantityMax": null,
+                  "unit": "g",
+                  "confidence": "exact"
+                },
+                "volume": null
+              },
+              "us": {
+                "mass": {
+                  "quantity": 8.8,
+                  "quantityMax": null,
+                  "unit": "oz",
+                  "confidence": "exact"
+                },
+                "volume": null
+              }
+            }
+          },
+          {
+            "id": "ingredient-2",
+            "text": "227 g White Mushrooms",
+            "name": "White Mushrooms",
+            "quantity": 227,
+            "quantityMax": null,
+            "unit": "g",
+            "unitDimension": "mass",
+            "preparation": null,
+            "optional": false,
+            "comment": null,
+            "measures": {
+              "asWritten": {
+                "quantity": 227,
+                "quantityMax": null,
+                "unit": "g"
+              },
+              "metric": {
+                "mass": {
+                  "quantity": 227,
+                  "quantityMax": null,
+                  "unit": "g",
+                  "confidence": "exact"
+                },
+                "volume": null
+              },
+              "us": {
+                "mass": {
+                  "quantity": 8,
+                  "quantityMax": null,
+                  "unit": "oz",
+                  "confidence": "exact"
+                },
+                "volume": null
+              }
+            }
+          },
+          {
+            "id": "ingredient-3",
+            "text": "2 unit Green Onion",
+            "name": "Green Onion",
+            "quantity": 2,
+            "quantityMax": null,
+            "unit": null,
+            "unitDimension": null,
+            "preparation": null,
+            "optional": false,
+            "comment": null,
+            "measures": {
+              "asWritten": {
+                "quantity": 2,
+                "quantityMax": null,
+                "unit": null
+              },
+              "metric": {
+                "mass": null,
+                "volume": null
+              },
+              "us": {
+                "mass": null,
+                "volume": null
+              }
+            }
+          },
+          {
+            "id": "ingredient-4",
+            "text": "56 g Radish, sliced",
+            "name": "Radish",
+            "quantity": 56,
+            "quantityMax": null,
+            "unit": "g",
+            "unitDimension": "mass",
+            "preparation": "sliced",
+            "optional": false,
+            "comment": null,
+            "measures": {
+              "asWritten": {
+                "quantity": 56,
+                "quantityMax": null,
+                "unit": "g"
+              },
+              "metric": {
+                "mass": {
+                  "quantity": 56,
+                  "quantityMax": null,
+                  "unit": "g",
+                  "confidence": "exact"
+                },
+                "volume": null
+              },
+              "us": {
+                "mass": {
+                  "quantity": 2,
+                  "quantityMax": null,
+                  "unit": "oz",
+                  "confidence": "exact"
+                },
+                "volume": null
+              }
+            }
+          },
+          {
+            "id": "ingredient-5",
+            "text": "1 tbsp Sesame Oil (Contains: Sesame)",
+            "name": "Sesame Oil",
+            "quantity": 1,
+            "quantityMax": null,
+            "unit": "tbsp",
+            "unitDimension": "volume",
+            "preparation": null,
+            "optional": false,
+            "comment": null,
+            "measures": {
+              "asWritten": {
+                "quantity": 1,
+                "quantityMax": null,
+                "unit": "tbsp"
+              },
+              "metric": {
+                "mass": {
+                  "quantity": 13.6,
+                  "quantityMax": null,
+                  "unit": "g",
+                  "confidence": "density"
+                },
+                "volume": {
+                  "quantity": 14.8,
+                  "quantityMax": null,
+                  "unit": "ml",
+                  "confidence": "exact"
+                }
+              },
+              "us": {
+                "mass": {
+                  "quantity": 0.5,
+                  "quantityMax": null,
+                  "unit": "oz",
+                  "confidence": "density"
+                },
+                "volume": {
+                  "quantity": 1,
+                  "quantityMax": null,
+                  "unit": "tbsp",
+                  "confidence": "exact"
+                }
+              }
+            }
+          },
+          {
+            "id": "ingredient-6",
+            "text": "1 tbsp Moo Shu Spice Blend (Contains: Wheat, Soy)",
+            "name": "Moo Shu Spice Blend",
+            "quantity": 1,
+            "quantityMax": null,
+            "unit": "tbsp",
+            "unitDimension": "volume",
+            "preparation": null,
+            "optional": false,
+            "comment": null,
+            "measures": {
+              "asWritten": {
+                "quantity": 1,
+                "quantityMax": null,
+                "unit": "tbsp"
+              },
+              "metric": {
+                "mass": null,
+                "volume": {
+                  "quantity": 14.8,
+                  "quantityMax": null,
+                  "unit": "ml",
+                  "confidence": "exact"
+                }
+              },
+              "us": {
+                "mass": null,
+                "volume": {
+                  "quantity": 1,
+                  "quantityMax": null,
+                  "unit": "tbsp",
+                  "confidence": "exact"
+                }
+              }
+            }
+          },
+          {
+            "id": "ingredient-7",
+            "text": "113 g Red Cabbage, shredded",
+            "name": "Red Cabbage",
+            "quantity": 113,
+            "quantityMax": null,
+            "unit": "g",
+            "unitDimension": "mass",
+            "preparation": "shredded",
+            "optional": false,
+            "comment": null,
+            "measures": {
+              "asWritten": {
+                "quantity": 113,
+                "quantityMax": null,
+                "unit": "g"
+              },
+              "metric": {
+                "mass": {
+                  "quantity": 113,
+                  "quantityMax": null,
+                  "unit": "g",
+                  "confidence": "exact"
+                },
+                "volume": null
+              },
+              "us": {
+                "mass": {
+                  "quantity": 4,
+                  "quantityMax": null,
+                  "unit": "oz",
+                  "confidence": "exact"
+                },
+                "volume": null
+              }
+            }
+          },
+          {
+            "id": "ingredient-8",
+            "text": "¼ cup Hoisin-Soy Sauce Blend (Contains: Mustard, Sesame, Soy, Sulphites, Wheat)",
+            "name": "Hoisin-Soy Sauce Blend",
+            "quantity": 0.25,
+            "quantityMax": null,
+            "unit": "cup",
+            "unitDimension": "volume",
+            "preparation": null,
+            "optional": false,
+            "comment": null,
+            "measures": {
+              "asWritten": {
+                "quantity": 0.25,
+                "quantityMax": null,
+                "unit": "cup"
+              },
+              "metric": {
+                "mass": {
+                  "quantity": 68,
+                  "quantityMax": null,
+                  "unit": "g",
+                  "confidence": "density"
+                },
+                "volume": {
+                  "quantity": 59,
+                  "quantityMax": null,
+                  "unit": "ml",
+                  "confidence": "exact"
+                }
+              },
+              "us": {
+                "mass": {
+                  "quantity": 2.4,
+                  "quantityMax": null,
+                  "unit": "oz",
+                  "confidence": "density"
+                },
+                "volume": {
+                  "quantity": 0.25,
+                  "quantityMax": null,
+                  "unit": "cup",
+                  "confidence": "exact"
+                }
+              }
+            }
+          },
+          {
+            "id": "ingredient-9",
+            "text": "2 tbsp Mayonnaise (Contains: Egg, Sulphites, Mustard)",
+            "name": "Mayonnaise",
+            "quantity": 2,
+            "quantityMax": null,
+            "unit": "tbsp",
+            "unitDimension": "volume",
+            "preparation": null,
+            "optional": false,
+            "comment": null,
+            "measures": {
+              "asWritten": {
+                "quantity": 2,
+                "quantityMax": null,
+                "unit": "tbsp"
+              },
+              "metric": {
+                "mass": {
+                  "quantity": 27.5,
+                  "quantityMax": null,
+                  "unit": "g",
+                  "confidence": "density"
+                },
+                "volume": {
+                  "quantity": 29.6,
+                  "quantityMax": null,
+                  "unit": "ml",
+                  "confidence": "exact"
+                }
+              },
+              "us": {
+                "mass": {
+                  "quantity": 1,
+                  "quantityMax": null,
+                  "unit": "oz",
+                  "confidence": "density"
+                },
+                "volume": {
+                  "quantity": 2,
+                  "quantityMax": null,
+                  "unit": "tbsp",
+                  "confidence": "exact"
+                }
+              }
+            }
+          },
+          {
+            "id": "ingredient-10",
+            "text": "1 tsp Sriracha (Contains: Sulphites)",
+            "name": "Sriracha",
+            "quantity": 1,
+            "quantityMax": null,
+            "unit": "tsp",
+            "unitDimension": "volume",
+            "preparation": null,
+            "optional": false,
+            "comment": null,
+            "measures": {
+              "asWritten": {
+                "quantity": 1,
+                "quantityMax": null,
+                "unit": "tsp"
+              },
+              "metric": {
+                "mass": null,
+                "volume": {
+                  "quantity": 4.9,
+                  "quantityMax": null,
+                  "unit": "ml",
+                  "confidence": "exact"
+                }
+              },
+              "us": {
+                "mass": null,
+                "volume": {
+                  "quantity": 1,
+                  "quantityMax": null,
+                  "unit": "tsp",
+                  "confidence": "exact"
+                }
+              }
+            }
+          },
+          {
+            "id": "ingredient-11",
+            "text": "6 unit Flour Tortillas (Contains: Gluten)",
+            "name": "Flour Tortillas",
+            "quantity": 6,
+            "quantityMax": null,
+            "unit": null,
+            "unitDimension": null,
+            "preparation": null,
+            "optional": false,
+            "comment": null,
+            "measures": {
+              "asWritten": {
+                "quantity": 6,
+                "quantityMax": null,
+                "unit": null
+              },
+              "metric": {
+                "mass": null,
+                "volume": null
+              },
+              "us": {
+                "mass": null,
+                "volume": null
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "stepGroups": [
+      {
+        "id": "step-group-1",
+        "name": null,
+        "steps": [
+          {
+            "id": "step-1",
+            "text": "Before starting, wash and dry all produce. Heat Guide for Step 4 (double each measurement for 4 people): 1/8 tsp mild, 1/4 tsp medium, 1/2 tsp spicy and 1 tsp extra-spicy! Cut mushrooms into 1/4-inch pieces. Thinly slice green onions.",
+            "durationMinutes": null,
+            "durationMinutesMax": null,
+            "temperature": null
+          },
+          {
+            "id": "step-2",
+            "text": "Heat a large non-stick pan over medium-high heat. When hot, add sesame oil, then white mushrooms and half the green onions. Cook, stirring occasionally, until mushrooms soften, 3-4 min.",
+            "durationMinutes": 3,
+            "durationMinutesMax": 4,
+            "temperature": null
+          },
+          {
+            "id": "step-3",
+            "text": "Add pork and Moo Shu spice blend to the pan with mushrooms. Cook, breaking up pork into smaller pieces, until no pink remains, 4-5 min. Stir in cabbage and hoisin-soy sauce blend. Cook, stirring occasionally, until cabbage wilts, 2-3 min. Season with pepper.",
+            "durationMinutes": 6,
+            "durationMinutesMax": 8,
+            "temperature": null
+          },
+          {
+            "id": "step-4",
+            "text": "While pork mixture cooks, stir together mayo and 1/2 tsp sriracha in a small bowl. (NOTE: Reference Heat Guide in Start Strong).",
+            "durationMinutes": null,
+            "durationMinutesMax": null,
+            "temperature": null
+          },
+          {
+            "id": "step-5",
+            "text": "Wrap tortillas in paper towels. Microwave, until warm and flexible, 1 min.",
+            "durationMinutes": 1,
+            "durationMinutesMax": null,
+            "temperature": null
+          },
+          {
+            "id": "step-6",
+            "text": "Divide pork mixture between tortillas. Top with radishes and remaining green onions. Dollop with sriracha mayo.",
+            "durationMinutes": null,
+            "durationMinutesMax": null,
+            "temperature": null
+          }
+        ]
+      }
+    ],
+    "nutrition": {
+      "servingSizeText": null,
+      "nutrients": [
+        {
+          "name": "calories",
+          "amount": 720,
+          "unit": "kcal"
+        },
+        {
+          "name": "protein",
+          "amount": 37,
+          "unit": "g"
+        },
+        {
+          "name": "fat",
+          "amount": 39,
+          "unit": "g"
+        },
+        {
+          "name": "saturatedFat",
+          "amount": 11,
+          "unit": "g"
+        },
+        {
+          "name": "carbohydrate",
+          "amount": 59,
+          "unit": "g"
+        },
+        {
+          "name": "sugar",
+          "amount": 11,
+          "unit": "g"
+        },
+        {
+          "name": "fiber",
+          "amount": 4,
+          "unit": "g"
+        },
+        {
+          "name": "cholesterol",
+          "amount": 85,
+          "unit": "mg"
+        },
+        {
+          "name": "sodium",
+          "amount": 1250,
+          "unit": "mg"
+        }
+      ]
+    },
+    "notes": []
+  },
+  "extraction": {
+    "extractedAt": "2026-10-09T22:56:29.132Z",
+    "method": "hybrid",
+    "provider": "openrouter",
+    "model": "google/gemini-2.5-flash",
+    "conversionTable": "1",
+    "pageTitle": "Moo Shu Pork Tacos Recipe | HelloFresh",
+    "siteName": "HelloFresh",
+    "warnings": [
+      "Masses marked density were estimated from typical ingredient weights. They vary with brand and how the ingredient is packed."
+    ]
+  }
+}

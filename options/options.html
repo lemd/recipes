@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>recipe settings</title>
+    <link rel="stylesheet" href="options.css">
+  </head>
+  <body>
+    <main>
+      <header>
+        <img src="../icons/icon48.png" width="28" height="28" alt="">
+        <div>
+          <h1>recipe</h1>
+          <p>Recipes are saved as JSON in the folder you choose. Each person who uses the extension keeps their own OpenRouter key in this browser.</p>
+        </div>
+      </header>
+
+      <form id="settings">
+        <fieldset>
+          <legend>Local copy</legend>
+          <p id="folder" class="help">No folder chosen yet.</p>
+          <button id="choose" type="button">Choose folder</button>
+          <p class="help">Choose the project folder if you want a copy on this computer. A key in <code>recipe.env</code> still works when the field below is empty.</p>
+        </fieldset>
+
+        <fieldset>
+          <legend>OpenRouter</legend>
+          <label>
+            API key
+            <input id="openrouter-key" type="password" autocomplete="off" spellcheck="false">
+          </label>
+          <p id="key-help" class="help">Saved in this browser only. Leave the field blank to keep the key already saved.</p>
+          <button id="clear-key" type="button" class="ghost" hidden>Clear saved key</button>
+        </fieldset>
+
+        <fieldset>
+          <legend>GitHub</legend>
+          <label class="choice">
+            <input id="github-push" type="checkbox">
+            Commit and push each saved recipe
+          </label>
+          <label>
+            Token
+            <input id="github-token" type="password" autocomplete="off" spellcheck="false">
+          </label>
+          <p class="help">Commits go to <code>lemd/recipes</code>. The token needs permission to write repository contents, and it stays in this browser.</p>
+          <button id="clear-token" type="button" class="ghost" hidden>Clear saved token</button>
+        </fieldset>
+
+        <label class="choice">
+          <input id="prefer-structured" type="checkbox">
+          Use the page’s embedded recipe data when it is complete, and skip the model
+        </label>
+
+        <div class="actions">
+          <button type="submit">Save</button>
+          <button id="test" type="button" class="ghost">Test connection</button>
+        </div>
+        <p id="status" role="status"></p>
+      </form>
+    </main>
+    <script type="module" src="options.js"></script>
+  </body>
+</html>

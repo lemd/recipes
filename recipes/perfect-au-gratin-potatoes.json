@@ -1,0 +1,693 @@
+{
+  "schemaVersion": "1.0.0",
+  "recipe": {
+    "name": "PERFECT Au Gratin Potatoes",
+    "description": "Perfectly creamy, cheesy and flavorful, these are au gratin potatoes at their very best!",
+    "author": "Kimberly Killebrew",
+    "sourceUrl": "https://www.daringgourmet.com/perfectly-creamy-au-gratin-potatoes/",
+    "language": "en-US",
+    "imageUrls": [
+      "https://www.daringgourmet.com/wp-content/uploads/2014/11/Au-Gratin-Potatoes-1-square.jpg"
+    ],
+    "yield": {
+      "servings": 6,
+      "text": "6 servings"
+    },
+    "timesMinutes": {
+      "prep": 15,
+      "cook": 90,
+      "total": 105,
+      "rest": null
+    },
+    "cuisine": "French",
+    "category": "Side Dish",
+    "keywords": [
+      "Au Gratin Potatoes"
+    ],
+    "diets": [],
+    "equipment": [
+      "Mandolin",
+      "2-Quart casserole dish",
+      "Large saucepan"
+    ],
+    "ingredientGroups": [
+      {
+        "id": "group-1",
+        "name": null,
+        "ingredients": [
+          {
+            "id": "ingredient-1",
+            "text": "2 pounds moderate starch potatoes , i.e. Yukon Gold (see blog post section about the best potatoes to use), peeled and sliced into 1/8 inch thick rounds",
+            "name": "moderate starch potatoes",
+            "quantity": 2,
+            "quantityMax": null,
+            "unit": "lb",
+            "unitDimension": "mass",
+            "preparation": "peeled and sliced into 1/8 inch thick rounds",
+            "optional": false,
+            "comment": "i.e. Yukon Gold (see blog post section about the best potatoes to use)",
+            "measures": {
+              "asWritten": {
+                "quantity": 2,
+                "quantityMax": null,
+                "unit": "lb"
+              },
+              "metric": {
+                "mass": {
+                  "quantity": 907,
+                  "quantityMax": null,
+                  "unit": "g",
+                  "confidence": "exact"
+                },
+                "volume": null
+              },
+              "us": {
+                "mass": {
+                  "quantity": 2,
+                  "quantityMax": null,
+                  "unit": "lb",
+                  "confidence": "exact"
+                },
+                "volume": null
+              }
+            }
+          },
+          {
+            "id": "ingredient-2",
+            "text": "3 tablespoons butter",
+            "name": "butter",
+            "quantity": 3,
+            "quantityMax": null,
+            "unit": "tbsp",
+            "unitDimension": "volume",
+            "preparation": null,
+            "optional": false,
+            "comment": null,
+            "measures": {
+              "asWritten": {
+                "quantity": 3,
+                "quantityMax": null,
+                "unit": "tbsp"
+              },
+              "metric": {
+                "mass": {
+                  "quantity": 43,
+                  "quantityMax": null,
+                  "unit": "g",
+                  "confidence": "density"
+                },
+                "volume": {
+                  "quantity": 44,
+                  "quantityMax": null,
+                  "unit": "ml",
+                  "confidence": "exact"
+                }
+              },
+              "us": {
+                "mass": {
+                  "quantity": 1.5,
+                  "quantityMax": null,
+                  "unit": "oz",
+                  "confidence": "density"
+                },
+                "volume": {
+                  "quantity": 3,
+                  "quantityMax": null,
+                  "unit": "tbsp",
+                  "confidence": "exact"
+                }
+              }
+            }
+          },
+          {
+            "id": "ingredient-3",
+            "text": "3 tablespoons all-purpose flour",
+            "name": "all-purpose flour",
+            "quantity": 3,
+            "quantityMax": null,
+            "unit": "tbsp",
+            "unitDimension": "volume",
+            "preparation": null,
+            "optional": false,
+            "comment": null,
+            "measures": {
+              "asWritten": {
+                "quantity": 3,
+                "quantityMax": null,
+                "unit": "tbsp"
+              },
+              "metric": {
+                "mass": {
+                  "quantity": 23.4,
+                  "quantityMax": null,
+                  "unit": "g",
+                  "confidence": "density"
+                },
+                "volume": {
+                  "quantity": 44,
+                  "quantityMax": null,
+                  "unit": "ml",
+                  "confidence": "exact"
+                }
+              },
+              "us": {
+                "mass": {
+                  "quantity": 0.8,
+                  "quantityMax": null,
+                  "unit": "oz",
+                  "confidence": "density"
+                },
+                "volume": {
+                  "quantity": 3,
+                  "quantityMax": null,
+                  "unit": "tbsp",
+                  "confidence": "exact"
+                }
+              }
+            }
+          },
+          {
+            "id": "ingredient-4",
+            "text": "1/2 cup finely chopped yellow onion",
+            "name": "yellow onion",
+            "quantity": 0.5,
+            "quantityMax": null,
+            "unit": "cup",
+            "unitDimension": "volume",
+            "preparation": "finely chopped",
+            "optional": false,
+            "comment": null,
+            "measures": {
+              "asWritten": {
+                "quantity": 0.5,
+                "quantityMax": null,
+                "unit": "cup"
+              },
+              "metric": {
+                "mass": null,
+                "volume": {
+                  "quantity": 118,
+                  "quantityMax": null,
+                  "unit": "ml",
+                  "confidence": "exact"
+                }
+              },
+              "us": {
+                "mass": null,
+                "volume": {
+                  "quantity": 0.5,
+                  "quantityMax": null,
+                  "unit": "cup",
+                  "confidence": "exact"
+                }
+              }
+            }
+          },
+          {
+            "id": "ingredient-5",
+            "text": "2 cloves garlic minced",
+            "name": "garlic",
+            "quantity": 2,
+            "quantityMax": null,
+            "unit": "clove",
+            "unitDimension": "count",
+            "preparation": "minced",
+            "optional": false,
+            "comment": null,
+            "measures": {
+              "asWritten": {
+                "quantity": 2,
+                "quantityMax": null,
+                "unit": "clove"
+              },
+              "metric": {
+                "mass": null,
+                "volume": null
+              },
+              "us": {
+                "mass": null,
+                "volume": null
+              }
+            }
+          },
+          {
+            "id": "ingredient-6",
+            "text": "2 cups whole milk",
+            "name": "whole milk",
+            "quantity": 2,
+            "quantityMax": null,
+            "unit": "cup",
+            "unitDimension": "volume",
+            "preparation": null,
+            "optional": false,
+            "comment": null,
+            "measures": {
+              "asWritten": {
+                "quantity": 2,
+                "quantityMax": null,
+                "unit": "cup"
+              },
+              "metric": {
+                "mass": {
+                  "quantity": 488,
+                  "quantityMax": null,
+                  "unit": "g",
+                  "confidence": "density"
+                },
+                "volume": {
+                  "quantity": 473,
+                  "quantityMax": null,
+                  "unit": "ml",
+                  "confidence": "exact"
+                }
+              },
+              "us": {
+                "mass": {
+                  "quantity": 1.08,
+                  "quantityMax": null,
+                  "unit": "lb",
+                  "confidence": "density"
+                },
+                "volume": {
+                  "quantity": 2,
+                  "quantityMax": null,
+                  "unit": "cup",
+                  "confidence": "exact"
+                }
+              }
+            }
+          },
+          {
+            "id": "ingredient-7",
+            "text": "1/2 cup heavy cream",
+            "name": "heavy cream",
+            "quantity": 0.5,
+            "quantityMax": null,
+            "unit": "cup",
+            "unitDimension": "volume",
+            "preparation": null,
+            "optional": false,
+            "comment": null,
+            "measures": {
+              "asWritten": {
+                "quantity": 0.5,
+                "quantityMax": null,
+                "unit": "cup"
+              },
+              "metric": {
+                "mass": {
+                  "quantity": 119,
+                  "quantityMax": null,
+                  "unit": "g",
+                  "confidence": "density"
+                },
+                "volume": {
+                  "quantity": 118,
+                  "quantityMax": null,
+                  "unit": "ml",
+                  "confidence": "exact"
+                }
+              },
+              "us": {
+                "mass": {
+                  "quantity": 4.2,
+                  "quantityMax": null,
+                  "unit": "oz",
+                  "confidence": "density"
+                },
+                "volume": {
+                  "quantity": 0.5,
+                  "quantityMax": null,
+                  "unit": "cup",
+                  "confidence": "exact"
+                }
+              }
+            }
+          },
+          {
+            "id": "ingredient-8",
+            "text": "1 1/2 teaspoons salt",
+            "name": "salt",
+            "quantity": 1.5,
+            "quantityMax": null,
+            "unit": "tsp",
+            "unitDimension": "volume",
+            "preparation": null,
+            "optional": false,
+            "comment": null,
+            "measures": {
+              "asWritten": {
+                "quantity": 1.5,
+                "quantityMax": null,
+                "unit": "tsp"
+              },
+              "metric": {
+                "mass": {
+                  "quantity": 9.1,
+                  "quantityMax": null,
+                  "unit": "g",
+                  "confidence": "density"
+                },
+                "volume": {
+                  "quantity": 7.4,
+                  "quantityMax": null,
+                  "unit": "ml",
+                  "confidence": "exact"
+                }
+              },
+              "us": {
+                "mass": {
+                  "quantity": 0.3,
+                  "quantityMax": null,
+                  "unit": "oz",
+                  "confidence": "density"
+                },
+                "volume": {
+                  "quantity": 1.5,
+                  "quantityMax": null,
+                  "unit": "tsp",
+                  "confidence": "exact"
+                }
+              }
+            }
+          },
+          {
+            "id": "ingredient-9",
+            "text": "1/4 teaspoon freshly ground black or white pepper (optional)",
+            "name": "freshly ground black or white pepper",
+            "quantity": 0.25,
+            "quantityMax": null,
+            "unit": "tsp",
+            "unitDimension": "volume",
+            "preparation": null,
+            "optional": true,
+            "comment": null,
+            "measures": {
+              "asWritten": {
+                "quantity": 0.25,
+                "quantityMax": null,
+                "unit": "tsp"
+              },
+              "metric": {
+                "mass": null,
+                "volume": {
+                  "quantity": 1.2,
+                  "quantityMax": null,
+                  "unit": "ml",
+                  "confidence": "exact"
+                }
+              },
+              "us": {
+                "mass": null,
+                "volume": {
+                  "quantity": 0.25,
+                  "quantityMax": null,
+                  "unit": "tsp",
+                  "confidence": "exact"
+                }
+              }
+            }
+          },
+          {
+            "id": "ingredient-10",
+            "text": "1 1/2 cups shredded Cheddar cheese (do not use pre-shredded, it's dusted with cellulose and doesn't melt as well; another fabulous option is half Gruyere/half Emmentaler)",
+            "name": "shredded Cheddar cheese",
+            "quantity": 1.5,
+            "quantityMax": null,
+            "unit": "cup",
+            "unitDimension": "volume",
+            "preparation": "shredded",
+            "optional": false,
+            "comment": "do not use pre-shredded, it's dusted with cellulose and doesn't melt as well; another fabulous option is half Gruyere/half Emmentaler",
+            "measures": {
+              "asWritten": {
+                "quantity": 1.5,
+                "quantityMax": null,
+                "unit": "cup"
+              },
+              "metric": {
+                "mass": null,
+                "volume": {
+                  "quantity": 355,
+                  "quantityMax": null,
+                  "unit": "ml",
+                  "confidence": "exact"
+                }
+              },
+              "us": {
+                "mass": null,
+                "volume": {
+                  "quantity": 1.5,
+                  "quantityMax": null,
+                  "unit": "cup",
+                  "confidence": "exact"
+                }
+              }
+            }
+          },
+          {
+            "id": "ingredient-11",
+            "text": "1/3 cup grated Parmesan cheese divided in half",
+            "name": "grated Parmesan cheese",
+            "quantity": 0.33,
+            "quantityMax": null,
+            "unit": "cup",
+            "unitDimension": "volume",
+            "preparation": "grated",
+            "optional": false,
+            "comment": "divided in half",
+            "measures": {
+              "asWritten": {
+                "quantity": 0.33,
+                "quantityMax": null,
+                "unit": "cup"
+              },
+              "metric": {
+                "mass": null,
+                "volume": {
+                  "quantity": 78,
+                  "quantityMax": null,
+                  "unit": "ml",
+                  "confidence": "exact"
+                }
+              },
+              "us": {
+                "mass": null,
+                "volume": {
+                  "quantity": 0.33,
+                  "quantityMax": null,
+                  "unit": "cup",
+                  "confidence": "exact"
+                }
+              }
+            }
+          },
+          {
+            "id": "ingredient-12",
+            "text": "chopped parsley for garnish",
+            "name": "parsley",
+            "quantity": null,
+            "quantityMax": null,
+            "unit": null,
+            "unitDimension": null,
+            "preparation": "chopped",
+            "optional": false,
+            "comment": "for garnish",
+            "measures": {
+              "asWritten": {
+                "quantity": null,
+                "quantityMax": null,
+                "unit": null
+              },
+              "metric": {
+                "mass": null,
+                "volume": null
+              },
+              "us": {
+                "mass": null,
+                "volume": null
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "stepGroups": [
+      {
+        "id": "step-group-1",
+        "name": null,
+        "steps": [
+          {
+            "id": "step-1",
+            "text": "Preheat the oven to 350 degrees F.",
+            "durationMinutes": null,
+            "durationMinutesMax": null,
+            "temperature": {
+              "celsius": {
+                "value": 177,
+                "valueMax": null
+              },
+              "fahrenheit": {
+                "value": 350,
+                "valueMax": null
+              }
+            }
+          },
+          {
+            "id": "step-2",
+            "text": "Heat the butter in a large saucepan over medium-high heat and add the onions and cook until soft and translucent, 5-6 minutes. Add the garlic and cook for another minute.",
+            "durationMinutes": 6,
+            "durationMinutesMax": 7,
+            "temperature": null
+          },
+          {
+            "id": "step-3",
+            "text": "Add the flour and stir to combine. Cook for a minute or two.",
+            "durationMinutes": 1,
+            "durationMinutesMax": 2,
+            "temperature": null
+          },
+          {
+            "id": "step-4",
+            "text": "Add the milk and cream, stirring continually to prevent clumping. Slowly bring to a boil, reduce the heat and simmer until slightly thickened.",
+            "durationMinutes": null,
+            "durationMinutesMax": null,
+            "temperature": null
+          },
+          {
+            "id": "step-5",
+            "text": "Add the cheddar cheese, parmesan cheese and salt and stir until melted.",
+            "durationMinutes": null,
+            "durationMinutesMax": null,
+            "temperature": null
+          },
+          {
+            "id": "step-6",
+            "text": "Add the potatoes and stir until thoroughly combined.",
+            "durationMinutes": null,
+            "durationMinutesMax": null,
+            "temperature": null
+          },
+          {
+            "id": "step-7",
+            "text": "Pour the mixture into a 2 quart casserole dish. Sprinkle with the remaining Parmesan cheese. Cover with foil.",
+            "durationMinutes": null,
+            "durationMinutesMax": null,
+            "temperature": null
+          },
+          {
+            "id": "step-8",
+            "text": "Bake for 1 hour or until the potatoes are tender (time can vary depending on how thickly the potatoes are sliced). Stick a sharp paring knife through the potatoes to check for doneness.",
+            "durationMinutes": 60,
+            "durationMinutesMax": null,
+            "temperature": null
+          },
+          {
+            "id": "step-9",
+            "text": "Uncover and bake for another 20 minutes or until the top is lightly browned and to enable excess moisture to evaporate.",
+            "durationMinutes": 20,
+            "durationMinutesMax": null,
+            "temperature": null
+          },
+          {
+            "id": "step-10",
+            "text": "Let sit for about 5 minutes before serving (if you used a lower starch potato variety like Yukon Gold it will be \"soupier\" and may need to sit a few minutes longer to enable the excess liquid to absorb). Sprinkle with some chopped parsley for garnish if desired.",
+            "durationMinutes": 5,
+            "durationMinutesMax": null,
+            "temperature": null
+          }
+        ]
+      }
+    ],
+    "nutrition": {
+      "servingSizeText": "1 serving",
+      "nutrients": [
+        {
+          "name": "calories",
+          "amount": 397,
+          "unit": "kcal"
+        },
+        {
+          "name": "carbohydrates",
+          "amount": 28,
+          "unit": "g"
+        },
+        {
+          "name": "protein",
+          "amount": 16,
+          "unit": "g"
+        },
+        {
+          "name": "fat",
+          "amount": 26,
+          "unit": "g"
+        },
+        {
+          "name": "saturated fat",
+          "amount": 16,
+          "unit": "g"
+        },
+        {
+          "name": "cholesterol",
+          "amount": 83,
+          "unit": "mg"
+        },
+        {
+          "name": "sodium",
+          "amount": 837,
+          "unit": "mg"
+        },
+        {
+          "name": "potassium",
+          "amount": 793,
+          "unit": "mg"
+        },
+        {
+          "name": "fiber",
+          "amount": 4,
+          "unit": "g"
+        },
+        {
+          "name": "sugar",
+          "amount": 4,
+          "unit": "g"
+        },
+        {
+          "name": "vitamin A",
+          "amount": 915,
+          "unit": "IU"
+        },
+        {
+          "name": "vitamin C",
+          "amount": 18.6,
+          "unit": "mg"
+        },
+        {
+          "name": "calcium",
+          "amount": 407,
+          "unit": "mg"
+        },
+        {
+          "name": "iron",
+          "amount": 5.3,
+          "unit": "mg"
+        }
+      ]
+    },
+    "notes": [
+      "*Make Ahead: See section in blog post about making this dish ahead of time."
+    ]
+  },
+  "extraction": {
+    "extractedAt": "2026-10-15T21:08:44.299Z",
+    "method": "hybrid",
+    "provider": "openrouter",
+    "model": "google/gemini-2.5-flash",
+    "conversionTable": "1",
+    "pageTitle": "PERFECT Au Gratin Potatoes - The Daring Gourmet",
+    "siteName": "The Daring Gourmet",
+    "warnings": [
+      "Masses marked density were estimated from typical ingredient weights. They vary with brand and how the ingredient is packed."
+    ]
+  }
+}

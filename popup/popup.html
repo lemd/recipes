@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>recipe</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <header>
+      <img src="../icons/icon48.png" width="22" height="22" alt="">
+      <h1>recipe</h1>
+    </header>
+    <p id="page-title" class="page"></p>
+    <div class="actions">
+      <button id="extract" type="button">Extract recipe</button>
+      <button id="settings" type="button" class="ghost">Settings</button>
+    </div>
+    <label class="system">
+      Amounts
+      <select id="system" aria-label="Show amounts in">
+        <option value="us" selected>US</option>
+        <option value="metric">Metric</option>
+        <option value="original">As written</option>
+      </select>
+    </label>
+    <p id="status" role="status"></p>
+    <div id="result" hidden></div>
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>

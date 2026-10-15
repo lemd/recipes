@@ -1,0 +1,518 @@
+{
+  "schemaVersion": "1.0.0",
+  "recipe": {
+    "name": "Creamy Potatoes Au Gratin",
+    "description": "Rich and creamy potatoes au gratin is the ultimate comfort food made with sliced potatoes, cheese, and milk. It's the perfect side dish for the holidays.",
+    "author": "Sam | Ahead of Thyme",
+    "sourceUrl": "https://www.aheadofthyme.com/creamy-potatoes-au-gratin/",
+    "language": "en-US",
+    "imageUrls": [
+      "https://www.aheadofthyme.com/wp-content/uploads/2019/11/creamy-potatoes-au-gratin-11-225x225.jpg",
+      "https://www.aheadofthyme.com/wp-content/uploads/2019/11/creamy-potatoes-au-gratin-11-260x195.jpg",
+      "https://www.aheadofthyme.com/wp-content/uploads/2019/11/creamy-potatoes-au-gratin-11-320x180.jpg",
+      "https://www.aheadofthyme.com/wp-content/uploads/2019/11/creamy-potatoes-au-gratin-11.jpg"
+    ],
+    "yield": {
+      "servings": 4,
+      "text": "4 servings"
+    },
+    "timesMinutes": {
+      "prep": 20,
+      "cook": 90,
+      "total": null,
+      "rest": null
+    },
+    "cuisine": null,
+    "category": "Side Dish",
+    "keywords": [],
+    "diets": [],
+    "equipment": [],
+    "ingredientGroups": [
+      {
+        "id": "group-1",
+        "name": null,
+        "ingredients": [
+          {
+            "id": "ingredient-1",
+            "text": "2 pounds Yukon gold potatoes, peeled and thinly sliced",
+            "name": "Yukon gold potatoes",
+            "quantity": 2,
+            "quantityMax": null,
+            "unit": "lb",
+            "unitDimension": "mass",
+            "preparation": "peeled and thinly sliced",
+            "optional": false,
+            "comment": null,
+            "measures": {
+              "asWritten": {
+                "quantity": 2,
+                "quantityMax": null,
+                "unit": "lb"
+              },
+              "metric": {
+                "mass": {
+                  "quantity": 907,
+                  "quantityMax": null,
+                  "unit": "g",
+                  "confidence": "exact"
+                },
+                "volume": null
+              },
+              "us": {
+                "mass": {
+                  "quantity": 2,
+                  "quantityMax": null,
+                  "unit": "lb",
+                  "confidence": "exact"
+                },
+                "volume": null
+              }
+            }
+          },
+          {
+            "id": "ingredient-2",
+            "text": "2 tablespoons unsalted butter",
+            "name": "unsalted butter",
+            "quantity": 2,
+            "quantityMax": null,
+            "unit": "tbsp",
+            "unitDimension": "volume",
+            "preparation": null,
+            "optional": false,
+            "comment": null,
+            "measures": {
+              "asWritten": {
+                "quantity": 2,
+                "quantityMax": null,
+                "unit": "tbsp"
+              },
+              "metric": {
+                "mass": {
+                  "quantity": 28.4,
+                  "quantityMax": null,
+                  "unit": "g",
+                  "confidence": "density"
+                },
+                "volume": {
+                  "quantity": 29.6,
+                  "quantityMax": null,
+                  "unit": "ml",
+                  "confidence": "exact"
+                }
+              },
+              "us": {
+                "mass": {
+                  "quantity": 1,
+                  "quantityMax": null,
+                  "unit": "oz",
+                  "confidence": "density"
+                },
+                "volume": {
+                  "quantity": 2,
+                  "quantityMax": null,
+                  "unit": "tbsp",
+                  "confidence": "exact"
+                }
+              }
+            }
+          },
+          {
+            "id": "ingredient-3",
+            "text": "½ medium onion, diced finely",
+            "name": "onion",
+            "quantity": 0.5,
+            "quantityMax": null,
+            "unit": null,
+            "unitDimension": null,
+            "preparation": "diced finely",
+            "optional": false,
+            "comment": "medium",
+            "measures": {
+              "asWritten": {
+                "quantity": 0.5,
+                "quantityMax": null,
+                "unit": null
+              },
+              "metric": {
+                "mass": null,
+                "volume": null
+              },
+              "us": {
+                "mass": null,
+                "volume": null
+              }
+            }
+          },
+          {
+            "id": "ingredient-4",
+            "text": "2 cloves garlic, minced",
+            "name": "garlic",
+            "quantity": 2,
+            "quantityMax": null,
+            "unit": "clove",
+            "unitDimension": "count",
+            "preparation": "minced",
+            "optional": false,
+            "comment": null,
+            "measures": {
+              "asWritten": {
+                "quantity": 2,
+                "quantityMax": null,
+                "unit": "clove"
+              },
+              "metric": {
+                "mass": null,
+                "volume": null
+              },
+              "us": {
+                "mass": null,
+                "volume": null
+              }
+            }
+          },
+          {
+            "id": "ingredient-5",
+            "text": "2 tablespoons all-purpose flour",
+            "name": "all-purpose flour",
+            "quantity": 2,
+            "quantityMax": null,
+            "unit": "tbsp",
+            "unitDimension": "volume",
+            "preparation": null,
+            "optional": false,
+            "comment": null,
+            "measures": {
+              "asWritten": {
+                "quantity": 2,
+                "quantityMax": null,
+                "unit": "tbsp"
+              },
+              "metric": {
+                "mass": {
+                  "quantity": 15.6,
+                  "quantityMax": null,
+                  "unit": "g",
+                  "confidence": "density"
+                },
+                "volume": {
+                  "quantity": 29.6,
+                  "quantityMax": null,
+                  "unit": "ml",
+                  "confidence": "exact"
+                }
+              },
+              "us": {
+                "mass": {
+                  "quantity": 0.6,
+                  "quantityMax": null,
+                  "unit": "oz",
+                  "confidence": "density"
+                },
+                "volume": {
+                  "quantity": 2,
+                  "quantityMax": null,
+                  "unit": "tbsp",
+                  "confidence": "exact"
+                }
+              }
+            }
+          },
+          {
+            "id": "ingredient-6",
+            "text": "1 and ½ cups whole milk",
+            "name": "whole milk",
+            "quantity": 1.5,
+            "quantityMax": null,
+            "unit": "cup",
+            "unitDimension": "volume",
+            "preparation": null,
+            "optional": false,
+            "comment": null,
+            "measures": {
+              "asWritten": {
+                "quantity": 1.5,
+                "quantityMax": null,
+                "unit": "cup"
+              },
+              "metric": {
+                "mass": {
+                  "quantity": 366,
+                  "quantityMax": null,
+                  "unit": "g",
+                  "confidence": "density"
+                },
+                "volume": {
+                  "quantity": 355,
+                  "quantityMax": null,
+                  "unit": "ml",
+                  "confidence": "exact"
+                }
+              },
+              "us": {
+                "mass": {
+                  "quantity": 12.9,
+                  "quantityMax": null,
+                  "unit": "oz",
+                  "confidence": "density"
+                },
+                "volume": {
+                  "quantity": 1.5,
+                  "quantityMax": null,
+                  "unit": "cup",
+                  "confidence": "exact"
+                }
+              }
+            }
+          },
+          {
+            "id": "ingredient-7",
+            "text": "½ teaspoon salt",
+            "name": "salt",
+            "quantity": 0.5,
+            "quantityMax": null,
+            "unit": "tsp",
+            "unitDimension": "volume",
+            "preparation": null,
+            "optional": false,
+            "comment": null,
+            "measures": {
+              "asWritten": {
+                "quantity": 0.5,
+                "quantityMax": null,
+                "unit": "tsp"
+              },
+              "metric": {
+                "mass": {
+                  "quantity": 3,
+                  "quantityMax": null,
+                  "unit": "g",
+                  "confidence": "density"
+                },
+                "volume": {
+                  "quantity": 2.5,
+                  "quantityMax": null,
+                  "unit": "ml",
+                  "confidence": "exact"
+                }
+              },
+              "us": {
+                "mass": {
+                  "quantity": 0.1,
+                  "quantityMax": null,
+                  "unit": "oz",
+                  "confidence": "density"
+                },
+                "volume": {
+                  "quantity": 0.5,
+                  "quantityMax": null,
+                  "unit": "tsp",
+                  "confidence": "exact"
+                }
+              }
+            }
+          },
+          {
+            "id": "ingredient-8",
+            "text": "¼ teaspoon ground black pepper, or to taste",
+            "name": "ground black pepper",
+            "quantity": 0.25,
+            "quantityMax": null,
+            "unit": "tsp",
+            "unitDimension": "volume",
+            "preparation": null,
+            "optional": false,
+            "comment": "or to taste",
+            "measures": {
+              "asWritten": {
+                "quantity": 0.25,
+                "quantityMax": null,
+                "unit": "tsp"
+              },
+              "metric": {
+                "mass": null,
+                "volume": {
+                  "quantity": 1.2,
+                  "quantityMax": null,
+                  "unit": "ml",
+                  "confidence": "exact"
+                }
+              },
+              "us": {
+                "mass": null,
+                "volume": {
+                  "quantity": 0.25,
+                  "quantityMax": null,
+                  "unit": "tsp",
+                  "confidence": "exact"
+                }
+              }
+            }
+          },
+          {
+            "id": "ingredient-9",
+            "text": "1 cup sharp white cheddar cheese, shredded",
+            "name": "sharp white cheddar cheese",
+            "quantity": 1,
+            "quantityMax": null,
+            "unit": "cup",
+            "unitDimension": "volume",
+            "preparation": "shredded",
+            "optional": false,
+            "comment": null,
+            "measures": {
+              "asWritten": {
+                "quantity": 1,
+                "quantityMax": null,
+                "unit": "cup"
+              },
+              "metric": {
+                "mass": null,
+                "volume": {
+                  "quantity": 237,
+                  "quantityMax": null,
+                  "unit": "ml",
+                  "confidence": "exact"
+                }
+              },
+              "us": {
+                "mass": null,
+                "volume": {
+                  "quantity": 1,
+                  "quantityMax": null,
+                  "unit": "cup",
+                  "confidence": "exact"
+                }
+              }
+            }
+          },
+          {
+            "id": "ingredient-10",
+            "text": "¼ cup Grana Padano cheese, shredded",
+            "name": "Grana Padano cheese",
+            "quantity": 0.25,
+            "quantityMax": null,
+            "unit": "cup",
+            "unitDimension": "volume",
+            "preparation": "shredded",
+            "optional": false,
+            "comment": null,
+            "measures": {
+              "asWritten": {
+                "quantity": 0.25,
+                "quantityMax": null,
+                "unit": "cup"
+              },
+              "metric": {
+                "mass": null,
+                "volume": {
+                  "quantity": 59,
+                  "quantityMax": null,
+                  "unit": "ml",
+                  "confidence": "exact"
+                }
+              },
+              "us": {
+                "mass": null,
+                "volume": {
+                  "quantity": 0.25,
+                  "quantityMax": null,
+                  "unit": "cup",
+                  "confidence": "exact"
+                }
+              }
+            }
+          },
+          {
+            "id": "ingredient-11",
+            "text": "fresh green onions, chopped (optional, for garnish)",
+            "name": "fresh green onions",
+            "quantity": null,
+            "quantityMax": null,
+            "unit": null,
+            "unitDimension": null,
+            "preparation": "chopped",
+            "optional": true,
+            "comment": "for garnish",
+            "measures": {
+              "asWritten": {
+                "quantity": null,
+                "quantityMax": null,
+                "unit": null
+              },
+              "metric": {
+                "mass": null,
+                "volume": null
+              },
+              "us": {
+                "mass": null,
+                "volume": null
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "stepGroups": [
+      {
+        "id": "step-group-1",
+        "name": null,
+        "steps": [
+          {
+            "id": "step-1",
+            "text": "Preheat oven to 375 F. Lightly grease a 9 x 9 inch baking dish. Layer potatoes in the baking dish.",
+            "durationMinutes": null,
+            "durationMinutesMax": null,
+            "temperature": {
+              "celsius": {
+                "value": 191,
+                "valueMax": null
+              },
+              "fahrenheit": {
+                "value": 375,
+                "valueMax": null
+              }
+            }
+          },
+          {
+            "id": "step-2",
+            "text": "Melt butter in a large saucepan over medium heat. Add onion and garlic and cook until soft and translucent, about 3 minutes. Whisk in flour and continue to whisk until browned, about 30 seconds to 1 minute. Gradually whisk in milk, and add salt and pepper. Continuously whisk until mixture has thickened, about 2-3 minutes. Turn heat down to low and add cheeses and stir continuously until melted, about 30 seconds.",
+            "durationMinutes": 6,
+            "durationMinutesMax": 7,
+            "temperature": null
+          },
+          {
+            "id": "step-3",
+            "text": "Pour cheese sauce on top of the potatoes, and cover with aluminum foil. Place into oven and bake for 1 hour. Uncover and continue to bake for 20-30 minutes or until lightly browned and the potatoes are tender and mixture has thickened.",
+            "durationMinutes": 80,
+            "durationMinutesMax": 90,
+            "temperature": null
+          },
+          {
+            "id": "step-4",
+            "text": "Garnish with fresh ground black pepper and green onions (optional) and serve immediately.",
+            "durationMinutes": null,
+            "durationMinutesMax": null,
+            "temperature": null
+          }
+        ]
+      }
+    ],
+    "nutrition": {
+      "servingSizeText": null,
+      "nutrients": []
+    },
+    "notes": []
+  },
+  "extraction": {
+    "extractedAt": "2026-10-15T21:09:21.330Z",
+    "method": "hybrid",
+    "provider": "openrouter",
+    "model": "google/gemini-2.5-flash",
+    "conversionTable": "1",
+    "pageTitle": "Creamy Potatoes Au Gratin - Ahead of Thyme",
+    "siteName": "Ahead of Thyme",
+    "warnings": [
+      "Masses marked density were estimated from typical ingredient weights. They vary with brand and how the ingredient is packed."
+    ]
+  }
+}

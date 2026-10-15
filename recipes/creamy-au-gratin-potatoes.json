@@ -1,0 +1,522 @@
+{
+  "schemaVersion": "1.0.0",
+  "recipe": {
+    "name": "Creamy au Gratin Potatoes",
+    "description": "These creamy au gratin potatoes layer thinly sliced russets and onions with a rich Cheddar cheese sauce for a comforting holiday side dish.",
+    "author": "Cathy Martin",
+    "sourceUrl": "https://www.allrecipes.com/recipe/15925/creamy-au-gratin-potatoes/",
+    "language": "en",
+    "imageUrls": [
+      "https://www.allrecipes.com/thmb/m4Ab_qaYCt9cFG2blJ5suJUkV0g=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/…"
+    ],
+    "yield": {
+      "servings": 4,
+      "text": "1 (2-quart) casserole"
+    },
+    "timesMinutes": {
+      "prep": 30,
+      "cook": 90,
+      "total": 120,
+      "rest": null
+    },
+    "cuisine": "French",
+    "category": "Side Dish",
+    "keywords": [],
+    "diets": [],
+    "equipment": [
+      "2-quart casserole dish",
+      "mandoline slicer",
+      "medium saucepan",
+      "whisk",
+      "aluminum foil"
+    ],
+    "ingredientGroups": [
+      {
+        "id": "group-1",
+        "name": null,
+        "ingredients": [
+          {
+            "id": "ingredient-1",
+            "text": "4 medium russet potatoes, cut into 1/4-inch-thick slices",
+            "name": "russet potatoes",
+            "quantity": 4,
+            "quantityMax": null,
+            "unit": null,
+            "unitDimension": null,
+            "preparation": "cut into 1/4-inch-thick slices",
+            "optional": false,
+            "comment": "medium",
+            "measures": {
+              "asWritten": {
+                "quantity": 4,
+                "quantityMax": null,
+                "unit": null
+              },
+              "metric": {
+                "mass": null,
+                "volume": null
+              },
+              "us": {
+                "mass": null,
+                "volume": null
+              }
+            }
+          },
+          {
+            "id": "ingredient-2",
+            "text": "1 medium onion, sliced into rings",
+            "name": "onion",
+            "quantity": 1,
+            "quantityMax": null,
+            "unit": null,
+            "unitDimension": null,
+            "preparation": "sliced into rings",
+            "optional": false,
+            "comment": "medium",
+            "measures": {
+              "asWritten": {
+                "quantity": 1,
+                "quantityMax": null,
+                "unit": null
+              },
+              "metric": {
+                "mass": null,
+                "volume": null
+              },
+              "us": {
+                "mass": null,
+                "volume": null
+              }
+            }
+          },
+          {
+            "id": "ingredient-3",
+            "text": "salt and ground black pepper to taste",
+            "name": "salt and ground black pepper",
+            "quantity": null,
+            "quantityMax": null,
+            "unit": null,
+            "unitDimension": null,
+            "preparation": "to taste",
+            "optional": false,
+            "comment": null,
+            "measures": {
+              "asWritten": {
+                "quantity": null,
+                "quantityMax": null,
+                "unit": null
+              },
+              "metric": {
+                "mass": null,
+                "volume": null
+              },
+              "us": {
+                "mass": null,
+                "volume": null
+              }
+            }
+          },
+          {
+            "id": "ingredient-4",
+            "text": "3 tablespoons butter",
+            "name": "butter",
+            "quantity": 3,
+            "quantityMax": null,
+            "unit": "tbsp",
+            "unitDimension": "volume",
+            "preparation": null,
+            "optional": false,
+            "comment": null,
+            "measures": {
+              "asWritten": {
+                "quantity": 3,
+                "quantityMax": null,
+                "unit": "tbsp"
+              },
+              "metric": {
+                "mass": {
+                  "quantity": 43,
+                  "quantityMax": null,
+                  "unit": "g",
+                  "confidence": "density"
+                },
+                "volume": {
+                  "quantity": 44,
+                  "quantityMax": null,
+                  "unit": "ml",
+                  "confidence": "exact"
+                }
+              },
+              "us": {
+                "mass": {
+                  "quantity": 1.5,
+                  "quantityMax": null,
+                  "unit": "oz",
+                  "confidence": "density"
+                },
+                "volume": {
+                  "quantity": 3,
+                  "quantityMax": null,
+                  "unit": "tbsp",
+                  "confidence": "exact"
+                }
+              }
+            }
+          },
+          {
+            "id": "ingredient-5",
+            "text": "3 tablespoons all-purpose flour",
+            "name": "all-purpose flour",
+            "quantity": 3,
+            "quantityMax": null,
+            "unit": "tbsp",
+            "unitDimension": "volume",
+            "preparation": null,
+            "optional": false,
+            "comment": null,
+            "measures": {
+              "asWritten": {
+                "quantity": 3,
+                "quantityMax": null,
+                "unit": "tbsp"
+              },
+              "metric": {
+                "mass": {
+                  "quantity": 23.4,
+                  "quantityMax": null,
+                  "unit": "g",
+                  "confidence": "density"
+                },
+                "volume": {
+                  "quantity": 44,
+                  "quantityMax": null,
+                  "unit": "ml",
+                  "confidence": "exact"
+                }
+              },
+              "us": {
+                "mass": {
+                  "quantity": 0.8,
+                  "quantityMax": null,
+                  "unit": "oz",
+                  "confidence": "density"
+                },
+                "volume": {
+                  "quantity": 3,
+                  "quantityMax": null,
+                  "unit": "tbsp",
+                  "confidence": "exact"
+                }
+              }
+            }
+          },
+          {
+            "id": "ingredient-6",
+            "text": "½ teaspoon salt",
+            "name": "salt",
+            "quantity": 0.5,
+            "quantityMax": null,
+            "unit": "tsp",
+            "unitDimension": "volume",
+            "preparation": null,
+            "optional": false,
+            "comment": null,
+            "measures": {
+              "asWritten": {
+                "quantity": 0.5,
+                "quantityMax": null,
+                "unit": "tsp"
+              },
+              "metric": {
+                "mass": {
+                  "quantity": 3,
+                  "quantityMax": null,
+                  "unit": "g",
+                  "confidence": "density"
+                },
+                "volume": {
+                  "quantity": 2.5,
+                  "quantityMax": null,
+                  "unit": "ml",
+                  "confidence": "exact"
+                }
+              },
+              "us": {
+                "mass": {
+                  "quantity": 0.1,
+                  "quantityMax": null,
+                  "unit": "oz",
+                  "confidence": "density"
+                },
+                "volume": {
+                  "quantity": 0.5,
+                  "quantityMax": null,
+                  "unit": "tsp",
+                  "confidence": "exact"
+                }
+              }
+            }
+          },
+          {
+            "id": "ingredient-7",
+            "text": "2 cups milk",
+            "name": "milk",
+            "quantity": 2,
+            "quantityMax": null,
+            "unit": "cup",
+            "unitDimension": "volume",
+            "preparation": null,
+            "optional": false,
+            "comment": null,
+            "measures": {
+              "asWritten": {
+                "quantity": 2,
+                "quantityMax": null,
+                "unit": "cup"
+              },
+              "metric": {
+                "mass": {
+                  "quantity": 488,
+                  "quantityMax": null,
+                  "unit": "g",
+                  "confidence": "density"
+                },
+                "volume": {
+                  "quantity": 473,
+                  "quantityMax": null,
+                  "unit": "ml",
+                  "confidence": "exact"
+                }
+              },
+              "us": {
+                "mass": {
+                  "quantity": 1.08,
+                  "quantityMax": null,
+                  "unit": "lb",
+                  "confidence": "density"
+                },
+                "volume": {
+                  "quantity": 2,
+                  "quantityMax": null,
+                  "unit": "cup",
+                  "confidence": "exact"
+                }
+              }
+            }
+          },
+          {
+            "id": "ingredient-8",
+            "text": "1 ½ cups freshly shredded Cheddar cheese",
+            "name": "freshly shredded Cheddar cheese",
+            "quantity": 1.5,
+            "quantityMax": null,
+            "unit": "cup",
+            "unitDimension": "volume",
+            "preparation": null,
+            "optional": false,
+            "comment": null,
+            "measures": {
+              "asWritten": {
+                "quantity": 1.5,
+                "quantityMax": null,
+                "unit": "cup"
+              },
+              "metric": {
+                "mass": null,
+                "volume": {
+                  "quantity": 355,
+                  "quantityMax": null,
+                  "unit": "ml",
+                  "confidence": "exact"
+                }
+              },
+              "us": {
+                "mass": null,
+                "volume": {
+                  "quantity": 1.5,
+                  "quantityMax": null,
+                  "unit": "cup",
+                  "confidence": "exact"
+                }
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "stepGroups": [
+      {
+        "id": "step-group-1",
+        "name": null,
+        "steps": [
+          {
+            "id": "step-1",
+            "text": "Gather all ingredients. Preheat the oven to 400 degrees F (200 degrees C). Grease a 2-quart casserole dish with butter.",
+            "durationMinutes": null,
+            "durationMinutesMax": null,
+            "temperature": {
+              "celsius": {
+                "value": 204,
+                "valueMax": null
+              },
+              "fahrenheit": {
+                "value": 400,
+                "valueMax": null
+              }
+            }
+          },
+          {
+            "id": "step-2",
+            "text": "Layer 1/2 of the potatoes in the bottom of the prepared casserole dish; season with salt and pepper.",
+            "durationMinutes": null,
+            "durationMinutesMax": null,
+            "temperature": null
+          },
+          {
+            "id": "step-3",
+            "text": "Layer onion slices over top, then top with remaining potatoes. Season again with salt and pepper.",
+            "durationMinutes": null,
+            "durationMinutesMax": null,
+            "temperature": null
+          },
+          {
+            "id": "step-4",
+            "text": "Melt butter in a medium saucepan over medium heat. Whisk in flour and salt; cook, whisking constantly, until raw flour flavor has cooked off, about 1 minute.",
+            "durationMinutes": 1,
+            "durationMinutesMax": null,
+            "temperature": null
+          },
+          {
+            "id": "step-5",
+            "text": "Gradually add milk, about 1/4 cup at a time, whisking well after each addition to incorporate; the gradual addition and whisking of milk will help avoid lumps in your sauce.",
+            "durationMinutes": null,
+            "durationMinutesMax": null,
+            "temperature": null
+          },
+          {
+            "id": "step-6",
+            "text": "Cook, whisking constantly, until the mixture has thickened, 3 to 5 minutes.",
+            "durationMinutes": 3,
+            "durationMinutesMax": 5,
+            "temperature": null
+          },
+          {
+            "id": "step-7",
+            "text": "Stir in freshly shredded cheese; cook, stirring constantly, until melted and smooth, 30 to 60 seconds.",
+            "durationMinutes": 0.5,
+            "durationMinutesMax": 1,
+            "temperature": null
+          },
+          {
+            "id": "step-8",
+            "text": "Pour cheese sauce evenly over potatoes. Cover tightly with aluminum foil.",
+            "durationMinutes": null,
+            "durationMinutesMax": null,
+            "temperature": null
+          },
+          {
+            "id": "step-9",
+            "text": "Bake in the preheated oven until sauce is bubbly and a knife slides easily through the potatoes, about 1 ½ hours.",
+            "durationMinutes": 90,
+            "durationMinutesMax": null,
+            "temperature": null
+          },
+          {
+            "id": "step-10",
+            "text": "Let stand briefly before serving so the sauce can settle. Enjoy!",
+            "durationMinutes": null,
+            "durationMinutesMax": null,
+            "temperature": null
+          }
+        ]
+      }
+    ],
+    "nutrition": {
+      "servingSizeText": null,
+      "nutrients": [
+        {
+          "name": "calories",
+          "amount": 499,
+          "unit": "kcal"
+        },
+        {
+          "name": "Total Carbohydrate",
+          "amount": 49,
+          "unit": "g"
+        },
+        {
+          "name": "Dietary Fiber",
+          "amount": 4,
+          "unit": "g"
+        },
+        {
+          "name": "Total Sugars",
+          "amount": 9,
+          "unit": "g"
+        },
+        {
+          "name": "Protein",
+          "amount": 20,
+          "unit": "g"
+        },
+        {
+          "name": "Total Fat",
+          "amount": 25,
+          "unit": "g"
+        },
+        {
+          "name": "Saturated Fat",
+          "amount": 16,
+          "unit": "g"
+        },
+        {
+          "name": "Cholesterol",
+          "amount": 77,
+          "unit": "mg"
+        },
+        {
+          "name": "Vitamin C",
+          "amount": 19,
+          "unit": "mg"
+        },
+        {
+          "name": "Sodium",
+          "amount": 683,
+          "unit": "mg"
+        },
+        {
+          "name": "Calcium",
+          "amount": 484,
+          "unit": "mg"
+        },
+        {
+          "name": "Iron",
+          "amount": 3,
+          "unit": "mg"
+        },
+        {
+          "name": "Potassium",
+          "amount": 1184,
+          "unit": "mg"
+        }
+      ]
+    },
+    "notes": [
+      "You can experiment with different cheeses or a blend for variety; Gruyère or Swiss are both delicious options. For the…",
+      "For easier holiday prep, you can bake the potatoes up to 2 days ahead, cover, and refrigerate. Reheat, covered with foi…"
+    ]
+  },
+  "extraction": {
+    "extractedAt": "2026-10-15T21:10:15.118Z",
+    "method": "hybrid",
+    "provider": "openrouter",
+    "model": "google/gemini-2.5-flash",
+    "conversionTable": "1",
+    "pageTitle": "Creamy au Gratin Potatoes Recipe",
+    "siteName": "Allrecipes",
+    "warnings": [
+      "The page text was shortened before extraction.",
+      "Masses marked density were estimated from typical ingredient weights. They vary with brand and how the ingredient is packed."
+    ]
+  }
+}

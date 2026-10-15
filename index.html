@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>recipe</title>
+    <link rel="stylesheet" href="viewer.css">
+  </head>
+  <body>
+    <header>
+      <div>
+        <h1>recipe</h1>
+        <p>Recipes saved in this repo.</p>
+      </div>
+      <label>
+        Show amounts in
+        <select id="system">
+          <option value="us" selected>US</option>
+          <option value="metric">Metric</option>
+          <option value="original">As written</option>
+        </select>
+      </label>
+    </header>
+    <div id="layout">
+      <nav id="list" aria-label="Recipes"></nav>
+      <article id="recipe"></article>
+    </div>
+    <script type="module" src="viewer.js"></script>
+  </body>
+</html>
