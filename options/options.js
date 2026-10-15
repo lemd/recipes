@@ -87,7 +87,7 @@ testButton.addEventListener("click", async () => {
 async function init() {
   const stored = await chrome.storage.local.get(STORED_KEYS);
   preferStructured.checked = Boolean(stored.preferStructuredData);
-  githubPush.checked = Boolean(stored.githubPush);
+  githubPush.checked = stored.githubPush !== false;
   await showSecrets();
   const folder = await recipeFolder();
   if (folder) await showFolder(folder);

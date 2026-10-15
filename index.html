@@ -21,6 +21,18 @@
         </select>
       </label>
     </header>
+    <form id="add">
+      <label>
+        Recipe link
+        <input id="add-url" type="url" required placeholder="https://">
+      </label>
+      <label>
+        GitHub token
+        <input id="add-token" type="password" autocomplete="off" spellcheck="false">
+      </label>
+      <button type="submit">Fetch</button>
+      <p id="add-status" class="muted"></p>
+    </form>
     <div id="layout">
       <nav id="list" aria-label="Recipes"></nav>
       <article id="recipe"></article>

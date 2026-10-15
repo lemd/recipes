@@ -1,9 +1,5 @@
 import { extractPage } from "../lib/extract-page.js";
-import { bestStructuredRecipe } from "../lib/jsonld.js";
-import { buildMessages } from "../lib/prompt.js";
-import { completeChat, parseModelJson } from "../lib/providers.js";
-import { shouldRetryModel } from "../lib/retry.js";
-import { finalizeRecipe } from "../lib/schema.js";
+import { makeRecipe } from "../lib/make-recipe.js";
 import { withDefaults } from "../lib/settings.js";
 
 chrome.sidePanel.setPanelBehavior({ openPanelOnActionClick: true });
@@ -43,11 +39,6 @@ async function loadSettings(override) {
   return withDefaults({ ...prefs, ...(override || {}) });
 }
 
-function providerReady(settings) {
-  if (settings.provider === "ollama") return Boolean(String(settings.ollamaUrl || "").trim() && String(settings.ollamaModel || "").trim());
-  return Boolean(String(settings.openrouterKey || "").trim() && String(settings.openrouterModel || "").trim());
-}
-
 async function extractRecipe(tabId, override) {
   const settings = await loadSettings(override);
   let page;
@@ -62,59 +53,9 @@ async function extractRecipe(tabId, override) {
   }
   if (!page) throw new Error("Couldn't read this page.");
   if (page.error) throw new Error(page.error);
-
-  const structured = bestStructuredRecipe(page.structured);
-  const ready = providerReady(settings);
-  const warnings = [];
-  if (page.truncated) warnings.push("The page text was shortened before extraction.");
-
-  let doc;
-  if (structured && (settings.preferStructuredData || !ready)) {
-    if (!ready) warnings.push("No model was configured, so this file came from the page's embedded recipe data.");
-    doc = finalizeRecipe(structured, { page, method: "structured-data", provider: null, model: null, warnings });
-  } else {
-    if (!ready) {
-      throw new Error(settings.provider === "ollama"
-        ? "Set OLLAMA_MODEL in recipe.env. You can also turn on embedded recipe data in settings."
-        : "Add an OpenRouter API key in settings.");
-    }
-    doc = await recipeFromModel(settings, page, warnings);
-  }
-
+  const doc = await makeRecipe(page, settings);
   await chrome.storage.session.set({ lastExtraction: { url: page.url, document: doc } });
   return doc;
-}
-
-async function recipeFromModel(settings, page, warnings) {
-  const compact = settings.provider === "ollama";
-  const model = settings.provider === "ollama" ? settings.ollamaModel.trim() : settings.openrouterModel.trim();
-  let correction = "";
-  let lastError = null;
-  for (let attempt = 0; attempt < 2; attempt += 1) {
-    try {
-      const built = buildMessages(page, { compact, correction });
-      const content = await completeChat(settings, built.messages);
-      const partial = parseModelJson(content);
-      const attemptWarnings = correction
-        ? [...warnings, "The first model response didn't match the recipe shape, so it was requested again."]
-        : warnings;
-      return finalizeRecipe(partial, {
-        page,
-        method: built.usedStructuredHint ? "hybrid" : "llm",
-        provider: settings.provider,
-        model,
-        warnings: attemptWarnings,
-      });
-    } catch (error) {
-      lastError = error;
-      if (attempt === 0 && shouldRetryModel(error)) {
-        correction = error.message;
-        continue;
-      }
-      throw error;
-    }
-  }
-  throw lastError;
 }
 
 function friendlyAccess(error) {

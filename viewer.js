@@ -27,6 +27,46 @@ load().catch((error) => {
   article.textContent = error.message || "Couldn't load the recipes.";
 });
 
+const addForm = document.querySelector("#add");
+const addUrl = document.querySelector("#add-url");
+const addToken = document.querySelector("#add-token");
+const addStatus = document.querySelector("#add-status");
+const TOKEN_KEY = "recipe-github-token";
+addToken.value = localStorage.getItem(TOKEN_KEY) || "";
+
+addForm.addEventListener("submit", async (event) => {
+  event.preventDefault();
+  const url = addUrl.value.trim();
+  const token = addToken.value.trim();
+  if (!token) {
+    addStatus.textContent = "Add a GitHub token. You can also run Fetch recipe from the Actions tab while signed in.";
+    return;
+  }
+  localStorage.setItem(TOKEN_KEY, token);
+  addStatus.textContent = "Starting…";
+  let response;
+  try {
+    response = await fetch("https://api.github.com/repos/lemd/recipes/actions/workflows/fetch-recipe.yml/dispatches", {
+      method: "POST",
+      headers: {
+        Accept: "application/vnd.github+json",
+        Authorization: `Bearer ${token}`,
+        "Content-Type": "application/json",
+        "X-GitHub-Api-Version": "2022-11-28",
+      },
+      body: JSON.stringify({ ref: "main", inputs: { url } }),
+    });
+  } catch {
+    addStatus.textContent = "Couldn't reach GitHub.";
+    return;
+  }
+  if (response.status === 204) {
+    addStatus.textContent = "Started. Refresh in a minute.";
+    return;
+  }
+  addStatus.textContent = `Couldn't start it (${response.status}). The token needs permission to start Actions.`;
+});
+
 async function load() {
   const response = await fetch("recipes/index.json");
   if (!response.ok) throw new Error("Couldn't read recipes/index.json.");

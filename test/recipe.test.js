@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import { findCatalogEntry, mergeCatalogs, recipeUrlKey, upsertCatalog } from "../lib/catalog.js";
 import { parseEnv, resolveSettings, settingsFromEnv } from "../lib/env.js";
+import { pageFromHtml } from "../lib/fetch-html.js";
 import { decodeBase64Utf8, parseGithubRepo, pushRecipe, utf8Base64 } from "../lib/github.js";
 import { publishRecipe, saveStatus } from "../lib/publish.js";
 import { extractPage } from "../lib/extract-page.js";
@@ -484,7 +485,8 @@ test("a settings key overrides the env file, and an empty field keeps the env ke
   assert.equal(saved.githubBranch, "main");
   const fallback = resolveSettings({ openrouterKey: "  " }, env);
   assert.equal(fallback.openrouterKey, "from-env");
-  assert.equal(fallback.githubPush, false);
+  assert.equal(fallback.githubPush, true);
+  assert.equal(resolveSettings({ githubPush: false }, env).githubPush, false);
 });
 
 test("treats the same recipe address as one saved page", () => {
@@ -495,6 +497,18 @@ test("treats the same recipe address as one saved page", () => {
   assert.equal(found.file, "tacos.json");
   assert.equal(recipeUrlKey("https://www.hellofresh.ca/recipes/moo-shu-pork-tacos/"), recipeUrlKey("https://hellofresh.ca/recipes/moo-shu-pork-tacos"));
   assert.equal(findCatalogEntry(catalog, "https://example.com/other"), null);
+});
+
+test("reads a recipe from page HTML", () => {
+  const page = pageFromHtml("https://example.com/soup", `<!doctype html><html lang="en"><head>
+    <title>Soup</title>
+    <link rel="canonical" href="https://example.com/soup">
+    <script type="application/ld+json">{"@type":"Recipe","name":"Soup","recipeIngredient":["1 cup water"],"recipeInstructions":"Boil."}</script>
+    </head><body><p>Boil the water.</p></body></html>`);
+  assert.equal(page.title, "Soup");
+  assert.equal(page.structured.length, 1);
+  assert.equal(page.structured[0].name, "Soup");
+  assert.match(page.text, /Boil the water/);
 });
 
 test("scales ingredient amounts with the serving count", () => {

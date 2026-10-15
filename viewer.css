@@ -33,6 +33,38 @@ h1 { font-size: 32px; letter-spacing: -0.03em; }
 
 header p, .muted { color: var(--muted); }
 
+#add {
+  display: grid;
+  grid-template-columns: 1fr 180px auto;
+  gap: 10px;
+  align-items: end;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 20px 8px;
+}
+
+#add button {
+  height: 36px;
+  border: 0;
+  border-radius: 8px;
+  background: var(--accent);
+  color: white;
+  font: inherit;
+  padding: 0 14px;
+  cursor: pointer;
+}
+
+#add input {
+  font: inherit;
+  color: var(--ink);
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 8px;
+}
+
+#add-status { grid-column: 1 / -1; min-height: 1.2em; }
+
 label { display: flex; flex-direction: column; gap: 6px; font-size: 13px; color: var(--muted); }
 
 select {
@@ -171,4 +203,5 @@ a { color: var(--accent); }
 @media (max-width: 720px) {
   #layout { grid-template-columns: 1fr; }
   header { align-items: start; flex-direction: column; }
+  #add { grid-template-columns: 1fr; }
 }
