@@ -32,20 +32,38 @@ load().catch((error) => {
 
 const addForm = document.querySelector("#add");
 const addUrl = document.querySelector("#add-url");
-const addToken = document.querySelector("#add-token");
 const addStatus = document.querySelector("#add-status");
+const githubSignIn = document.querySelector("#github-signin");
 const TOKEN_KEY = "recipe-github-token";
-addToken.value = localStorage.getItem(TOKEN_KEY) || "";
+
+function showGithubUser() {
+  const login = document.documentElement.dataset.githubUser;
+  if (login) githubSignIn.textContent = login;
+}
+
+document.addEventListener("recipe-github-ready", showGithubUser);
+showGithubUser();
+
+githubSignIn.addEventListener("click", () => {
+  let handled = false;
+  const ack = () => { handled = true; };
+  document.addEventListener("recipe-github-signin-ack", ack, { once: true });
+  document.dispatchEvent(new CustomEvent("recipe-github-signin"));
+  if (!handled) {
+    addStatus.textContent = "Sign in from the recipe extension, or run Fetch recipe on GitHub.";
+    return;
+  }
+  addStatus.textContent = "Approve recipe on GitHub.";
+});
 
 addForm.addEventListener("submit", async (event) => {
   event.preventDefault();
   const url = addUrl.value.trim();
-  const token = addToken.value.trim();
+  const token = localStorage.getItem(TOKEN_KEY) || "";
   if (!token) {
-    addStatus.textContent = "Add a GitHub token. You can also run Fetch recipe from the Actions tab while signed in.";
+    addStatus.textContent = "Sign in with GitHub first.";
     return;
   }
-  localStorage.setItem(TOKEN_KEY, token);
   addStatus.textContent = "Starting…";
   let response;
   try {

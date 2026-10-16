@@ -26,7 +26,15 @@
     "service_worker": "scripts/service-worker.js",
     "type": "module"
   },
-  "permissions": ["activeTab", "scripting", "storage", "contextMenus", "sidePanel"],
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsqMJD9Bl26ar5jcpR7im5SZzcR5kfZzMO4D9MS1u0xYe10YSEqFpCAIfqVZQwOkjIPTj9QdZV3zM8tO5hUtsrScs2AbwAJcXmNJSl206O/p+yR92IRQFBT8uAzMIf/T3biM+a9EcFb/MghEF+kqiwNGMr/wW8j2DpWvRmUYj06McUZUWJD0v66nPWT3JJf23DlnC+Db2GT+tNlErbIIdKYev9Ejdh356BN04Zq+otEVvIrsCv2QywSfLzHKgLVQBaBJ32jN33rDzCyyiaberD6B/e3texhFgyVqOT79Eo0R4/esVDAcxPaNifqNYVBC45Fv3RqitxYxzw2luroo5wwIDAQAB",
+  "permissions": ["activeTab", "scripting", "storage", "contextMenus", "sidePanel", "identity"],
+  "content_scripts": [
+    {
+      "matches": ["https://lemd.github.io/recipes/*"],
+      "js": ["scripts/github-page.js"],
+      "run_at": "document_start"
+    }
+  ],
   "host_permissions": [
     "http://*/*",
     "https://*/*"

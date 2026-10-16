@@ -1,5 +1,4 @@
 import { formatMeasure, formatMinutes, shownMeasures, tidyStepText } from "../lib/format.js";
-import { ingredientPhotoUrl } from "../lib/ingredient-photo.js";
 import { findSavedRecipe, runtimeSettings } from "../lib/folder.js";
 import { publishRecipe, saveStatus } from "../lib/publish.js";
 import { SCHEMA_VERSION } from "../lib/schema.js";
@@ -225,32 +224,16 @@ function warningNote(warning) {
 
 function ingredientCard(ingredient, system) {
   const item = document.createElement("li");
-  const photo = document.createElement("div");
-  photo.className = "photo";
-  const url = ingredientPhotoUrl(ingredient.name);
-  if (url) {
-    const image = document.createElement("img");
-    image.alt = "";
-    image.src = url;
-    image.addEventListener("error", () => image.remove());
-    photo.append(image);
-  }
-  const name = document.createElement("div");
-  name.className = "name";
-  name.textContent = ingredient.name || ingredient.text || "Ingredient";
-  const amount = document.createElement("div");
-  amount.className = "amount";
   const shown = system === "original"
     ? { measure: ingredient.measures?.asWritten, also: null }
     : shownMeasures(ingredient, system);
-  const bits = [
+  const amount = [
     formatMeasure(shown.measure),
     shown.also ? formatMeasure(shown.also) : "",
     ingredient.preparation,
     ingredient.optional ? "optional" : "",
-  ].filter(Boolean);
-  amount.textContent = bits.join(" · ");
-  item.append(photo, name);
-  if (amount.textContent) item.append(amount);
+  ].filter(Boolean).join(" · ");
+  const name = ingredient.name || ingredient.text || "Ingredient";
+  item.textContent = amount ? `${amount} ${name}` : name;
   return item;
 }

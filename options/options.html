@@ -36,16 +36,13 @@
 
         <fieldset>
           <legend>GitHub</legend>
+          <p id="github-account" class="help">Not signed in.</p>
           <label class="choice">
             <input id="github-push" type="checkbox" checked>
             Commit and push each saved recipe
           </label>
-          <label>
-            Token
-            <input id="github-token" type="password" autocomplete="off" spellcheck="false">
-          </label>
-          <p class="help">With a token saved, each new recipe is pushed to <code>lemd/recipes</code>. It needs permission to write repository contents, and it stays in this browser.</p>
-          <button id="clear-token" type="button" class="ghost" hidden>Clear saved token</button>
+          <button id="github-signin" type="button">Sign in with GitHub</button>
+          <p class="help">Pushes go to <code>lemd/recipes</code>. GitHub asks you to approve access, and it stays in this browser.</p>
         </fieldset>
 
         <label class="choice">
@@ -60,6 +57,10 @@
         <p id="status" role="status"></p>
       </form>
     </main>
+    <form id="github-app" method="post" action="https://github.com/settings/apps/new" target="_blank" hidden>
+      <input type="hidden" name="manifest" id="github-manifest">
+      <input type="hidden" name="state" id="github-state">
+    </form>
     <script type="module" src="options.js"></script>
   </body>
 </html>

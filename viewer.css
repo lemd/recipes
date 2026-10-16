@@ -35,7 +35,7 @@ header p, .muted { color: var(--muted); }
 
 #add {
   display: grid;
-  grid-template-columns: 1fr 180px auto;
+  grid-template-columns: 1fr auto auto;
   gap: 10px;
   align-items: end;
   max-width: 980px;
@@ -53,6 +53,8 @@ header p, .muted { color: var(--muted); }
   padding: 0 14px;
   cursor: pointer;
 }
+
+#github-signin { background: var(--ink); }
 
 #add input {
   font: inherit;

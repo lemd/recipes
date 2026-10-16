@@ -112,7 +112,7 @@ button.ghost {
   border: 1px solid var(--line);
 }
 
-fieldset > button.ghost {
+fieldset > button.ghost, #github-signin {
   margin-top: 12px;
 }
 

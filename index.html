@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>recipe</title>
-    <link rel="stylesheet" href="viewer.css?v=3">
+    <link rel="stylesheet" href="viewer.css?v=4">
   </head>
   <body>
     <header>
@@ -26,10 +26,7 @@
         Recipe link
         <input id="add-url" type="url" required placeholder="https://">
       </label>
-      <label>
-        GitHub token
-        <input id="add-token" type="password" autocomplete="off" spellcheck="false">
-      </label>
+      <button id="github-signin" type="button">Sign in with GitHub</button>
       <button type="submit">Fetch</button>
       <p id="add-status" class="muted"></p>
     </form>
@@ -38,6 +35,6 @@
       <nav id="list" aria-label="Recipes"></nav>
       <article id="recipe"></article>
     </div>
-    <script type="module" src="viewer.js?v=3"></script>
+    <script type="module" src="viewer.js?v=4"></script>
   </body>
 </html>

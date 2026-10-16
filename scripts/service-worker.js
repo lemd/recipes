@@ -1,4 +1,5 @@
 import { extractPage } from "../lib/extract-page.js";
+import { exchangeManifestCode } from "../lib/github-auth.js";
 import { makeRecipe } from "../lib/make-recipe.js";
 import { withDefaults } from "../lib/settings.js";
 
@@ -21,6 +22,20 @@ chrome.runtime.onStartup.addListener(() => {
 });
 
 chrome.runtime.onMessage.addListener((message, _sender, sendResponse) => {
+  if (message?.type === "GITHUB_SIGN_IN") {
+    chrome.tabs.create({ url: chrome.runtime.getURL("options/options.html#github") });
+    sendResponse({ ok: true });
+    return false;
+  }
+  if (message?.type === "GITHUB_APP_CODE") {
+    finishGithubApp(message)
+      .then(() => sendResponse({ ok: true }))
+      .catch(async (error) => {
+        await chrome.storage.session.set({ githubStatus: error.message || "Couldn't sign in with GitHub." });
+        sendResponse({ ok: false, error: error.message });
+      });
+    return true;
+  }
   if (message?.type !== "EXTRACT_RECIPE") return undefined;
   extractRecipe(message.tabId, message.settings)
     .then((doc) => sendResponse({ ok: true, document: doc }))
@@ -33,6 +48,18 @@ chrome.contextMenus.onClicked.addListener(async (info, tab) => {
   await chrome.storage.session.set({ extractTabId: tab.id });
   await chrome.sidePanel.open({ tabId: tab.id });
 });
+
+async function finishGithubApp(message) {
+  const { githubAppState } = await chrome.storage.session.get("githubAppState");
+  if (!message.state || message.state !== githubAppState) return;
+  await chrome.storage.session.remove("githubAppState");
+  const app = await exchangeManifestCode(message.code);
+  await chrome.storage.local.set({
+    githubClientId: app.clientId,
+    githubClientSecret: app.clientSecret,
+  });
+  await chrome.tabs.create({ url: chrome.runtime.getURL("options/options.html#github") });
+}
 
 async function loadSettings(override) {
   const prefs = withDefaults(await chrome.storage.local.get(["preferStructuredData", "displaySystem"]));

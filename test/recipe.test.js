@@ -3,6 +3,7 @@ import test from "node:test";
 import { findCatalogEntry, mergeCatalogs, recipeUrlKey, upsertCatalog } from "../lib/catalog.js";
 import { parseEnv, resolveSettings, settingsFromEnv } from "../lib/env.js";
 import { pageFromHtml } from "../lib/fetch-html.js";
+import { exchangeManifestCode, githubAppManifest, parseGithubToken } from "../lib/github-auth.js";
 import { assignTags, normalizeTags } from "../lib/tags.js";
 import { decodeBase64Utf8, parseGithubRepo, pushRecipe, utf8Base64 } from "../lib/github.js";
 import { publishRecipe, saveStatus } from "../lib/publish.js";
@@ -551,6 +552,20 @@ test("tags seasons, meals, courses, and methods from the dish", () => {
   assert.deepEqual(assignTags({ name: "Pasta", timesMinutes: { prep: 15, cook: 20 } }).times, ["hour"]);
   assert.deepEqual(assignTags({ name: "Stew", timesMinutes: { total: 90 } }).times, ["long"]);
   assert.deepEqual(normalizeTags({ tags: { times: ["quick"] } }, { name: "Stew", timesMinutes: { total: 90 } }).times, ["long"]);
+});
+
+test("starts GitHub sign-in without a pasted token", async () => {
+  const manifest = githubAppManifest();
+  assert.equal(manifest.default_permissions.contents, "write");
+  assert.equal(manifest.default_permissions.actions, "write");
+  assert.equal(manifest.callback_urls[0], "https://hcjdglghcapfdoomklfpdgmofmkkefdo.chromiumapp.org/");
+  assert.equal(parseGithubToken({ access_token: "ghu_test" }), "ghu_test");
+  assert.throws(() => parseGithubToken({ error: "access_denied", error_description: "cancelled" }), /cancelled/);
+  const app = await exchangeManifestCode("code", async () => ({
+    ok: true,
+    json: async () => ({ client_id: "Iv1.abc", client_secret: "secret", pem: "private" }),
+  }));
+  assert.deepEqual(app, { clientId: "Iv1.abc", clientSecret: "secret" });
 });
 
 test("scales ingredient amounts with the serving count", () => {
