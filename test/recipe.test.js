@@ -547,6 +547,10 @@ test("tags seasons, meals, courses, and methods from the dish", () => {
   const tagged = normalizeTags({ tags: { meals: ["brunch", "holiday"], seasons: ["spring"] } }, { name: "Eggs" });
   assert.deepEqual(tagged.meals, ["brunch", "breakfast"]);
   assert.deepEqual(tagged.seasons, ["spring"]);
+  assert.deepEqual(assignTags({ name: "Stir fry", timesMinutes: { total: 20 } }).times, ["quick"]);
+  assert.deepEqual(assignTags({ name: "Pasta", timesMinutes: { prep: 15, cook: 20 } }).times, ["hour"]);
+  assert.deepEqual(assignTags({ name: "Stew", timesMinutes: { total: 90 } }).times, ["long"]);
+  assert.deepEqual(normalizeTags({ tags: { times: ["quick"] } }, { name: "Stew", timesMinutes: { total: 90 } }).times, ["long"]);
 });
 
 test("scales ingredient amounts with the serving count", () => {
